@@ -1,3 +1,7 @@
+@font-face {
+  font-family: WindowsRegular;
+  src: url(WindowsRegular.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -5,19 +9,23 @@
 }
 html, body {
   height: 100%;
-  overflow: hidden
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
 }
 body {
   background-color: #008080;
 }
-.window {
+.hidden {
+  display: none;
+}
+/*.window {
     margin: auto;
     margin-top: 100px;
   width: 50%;
 }
 .title-bar-text {
     font-size: 13px;
-}
+}*/
 .window-body p {
     font-size: 14px;
 }
@@ -47,7 +55,7 @@ body {
 .window-body-section-country img {
     height: 16px;
     width: 16px;
-}
+}/*
 .title-bar {
   padding: 2px 4px;
 }
@@ -62,8 +70,28 @@ body {
   height: 16px;
   width: 16px;
   display: block;
+}*/
+.window {
+  width: 50%;
+  position: absolute;
+  z-index: 20;
+  cursor: default; /* Keeps cursor consistent over the window body */
 }
 
+.title-bar {
+  background: #000080;
+  color: white;
+  padding: 4px 8px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  cursor: move;
+  cursor: default; /* Keeps cursor consistent over the window body */
+}
+
+.window-content {
+  padding: 10px;
+}
 /* Footer -----------------------------------------------------------*/
 .taskbar {
       position: fixed;
@@ -92,6 +120,67 @@ body {
   align-items: center;
   gap: 6px; /* spacing between icon and text */
 }
+.taskbar-button {
+  background: #c0c0c0;
+  border: 2px outset #fff;
+  padding: 4px 10px;
+  font-weight: bold;
+  margin-left: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.taskbar-button .start-icon {
+  margin-right: 6px;
+}
+.start-menu {
+  position: absolute;
+  bottom: 40px;
+  left: -0px;
+  background: #c0c0c0;
+  border: 2px solid #000;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 200px;
+  box-shadow: 2px 2px #808080;
+  z-index: 10;
+  display: flex;
+    width: auto; /* allow content to size naturally */
+}
+
+.start-menu li {
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-bottom: 1px solid #a0a0a0;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: WindowsRegular;
+}
+.start-menu li:hover {
+  background-color: #000080;
+  color: white;
+}
+.hidden {
+  display: none;
+}
+
+
+.menu-icon {
+  width: 34px;
+  height: 34px;
+  margin-right: 8px
+}
+
+
+.start-stripe img {
+  width: 70%;
+}
+
 
 .start-button img.start-icon {
   width: 16px;
@@ -123,4 +212,5 @@ body {
       border: 2px inset #fff;
       padding: 2px 8px;
       font-size: 12px;
+      font-family: WindowsRegular;
     }
