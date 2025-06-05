@@ -76,6 +76,8 @@ body {
   position: absolute;
   z-index: 20;
   cursor: default; /* Keeps cursor consistent over the window body */
+  left: 350px;
+  top: 150px;
 }
 
 .title-bar {
