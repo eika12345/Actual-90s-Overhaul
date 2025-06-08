@@ -75,7 +75,7 @@ body {
   width: 50%;
   position: absolute;
   z-index: 20;
-  cursor: default; /* Keeps cursor consistent over the window body */
+  cursor: default; /* Keeps cursor consistent over the window body  fart*/
   left: 350px;
   top: 150px;
 }
