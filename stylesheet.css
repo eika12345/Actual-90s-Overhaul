@@ -120,7 +120,7 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 6px; /* spacing between icon and text */
+  gap: 6px; 
 }
 .taskbar-button {
   background: #c0c0c0;
