@@ -18,36 +18,43 @@ body {
 .hidden {
   display: none;
 }
-/*.window {
-    margin: auto;
-    margin-top: 100px;
-  width: 50%;
+/*text in window title*/
+.title-text {
+  display: flex;
+  align-items: center; /* vertically center icon and text */
+  gap: 6px; /* space between icon and text */
 }
-.title-bar-text {
-    font-size: 13px;
-}*/
+/*icon in window title*/
+.title-icon {
+  width: 16px;
+  height: 16px;
+}
+
 .window-body p {
-    font-size: 14px;
+  
+}
+/*makes the window scrollable*/
+#myWindow .window-body {
+  max-height: 700px;        
+  overflow-y: auto; /* Enables vertical scrollbar */
+  overflow-x: hidden; /* Optional: hides horizontal scrollbar */
 }
 .window-body-section {
-    margin: 50px;
+    margin: 3em 5em 3em;
 }
-.window-body-section p {
-    font-size: 15px
+.window-body-section p, h5 {
+    font-size: 16px
 }
 .window-body-section-title {
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 50px;
-    margin-bottom: 10px;
+    margin: 5em 5em 1em 5em;
 }
 
 .window-body-section-country {
-     margin-left: 50px;
-    margin-right: 50px;
-    display: flex;
+  margin-left: 5em;
+  margin-right: 5em;
+  display: flex;
   align-items: center; 
-  gap: 3px; 
+  gap: 0.3em; 
 }
 .window-body-section-country p {
     font-size: 15px;
@@ -55,7 +62,85 @@ body {
 .window-body-section-country img {
     height: 16px;
     width: 16px;
-}/*
+}
+.window-body-projects-title {
+  margin: 3em 5em 1em;
+}
+.window-body-projects {
+  margin: 1em 5em 3em;
+}
+.window-body-projects p {
+  font-size: 16px;
+}
+.window-body-projects-image {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
+  gap: 1em; 
+  max-width: 75%;
+    margin: 2em auto;
+}
+.window-body-projects-image p {
+  font-size: 16px;
+}
+.window-body-projects-image img {
+  max-width: 100%;
+  border-top: 2px solid #fff;
+      border-bottom: 2px solid #808080;
+      border-left: 2px solid #fff;
+      border-right: 2px solid #808080;
+}
+.window.maximized {
+      border-top: 2px solid #fff;
+      border-bottom: 2px solid #808080;
+      border-left: 2px solid #fff;
+      border-right: 2px solid #808080;
+  box-shadow: none;
+  /* Remove margin/padding if needed */
+  padding: 0;
+}
+
+.window.maximized .window-body {
+  padding: 20px; /* Adjust spacing for full screen */
+}
+
+.window.maximized .title-bar {
+  height: 30px;
+  font-size: 14px;
+}
+.skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 5em;
+      justify-content: center;
+    }
+
+    .tag {
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: bold;
+      color: white;
+      display: inline-block;
+    }
+
+    .html { background-color: #f18a29; }
+    .css { background-color: #f13629; }
+    .js{ background-color: #4db33d; }
+    .python { background-color: #3776ab; }
+    .react { background-color: #61dafb; color: #000; }
+    .vue { background-color: #42b883; }
+    .swift { background-color: #ffac45; }
+    .swiftui { background-color: #0f62fe; }
+    .flask { background-color: #000000; }
+    .mongodb { background-color: #4db33d; }
+    .git { background-color: #a259ff; }
+    .figma { background-color: #a259ff; }
+    .sqlite { background-color: #003b57; }
+    .sql { background-color: #e38c00; }
+/*
 .title-bar {
   padding: 2px 4px;
 }
@@ -94,7 +179,30 @@ body {
 .window-content {
   padding: 10px;
 }
-/* Footer -----------------------------------------------------------*/
+.folder-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.folder {
+  width: 80px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.folder img {
+  width: 48px;
+  height: 48px;
+}
+
+.folder p {
+  font-size: 12px;
+  margin-top: 4px;
+  font-family: WindowsRegular;
+}
+/* taskbar-----------------------------------------------------------*/
 .taskbar {
       position: fixed;
       bottom: 0;
@@ -121,20 +229,21 @@ body {
   display: flex;
   align-items: center;
   gap: 6px; 
+  height: 32px;
 }
 .taskbar-button {
-  background: #c0c0c0;
-  border: 2px outset #fff;
-  padding: 4px 10px;
-  font-weight: bold;
-  margin-left: 4px;
+ padding: 2px 10px;
+  font-size: 14px;
   cursor: pointer;
   display: flex;
   align-items: center;
+  gap: 6px; 
+  height: 32px;
+  font-family: WindowsRegular;
 }
-
-.taskbar-button .start-icon {
-  margin-right: 6px;
+.taskbar-button img.start-icon {
+  width: 16px;
+  height: 16px;
 }
 .start-menu {
   position: absolute;
@@ -188,6 +297,9 @@ body {
   width: 16px;
   height: 16px;
   display: inline-block;
+}
+.window.maximized {
+  border-radius: 0;
 }
 
     .start-button:hover {
