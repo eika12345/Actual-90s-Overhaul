@@ -33,6 +33,7 @@ body {
 .window-body p {
   
 }
+
 /*makes the window scrollable*/
 #myWindow .window-body {
   max-height: 700px;        
@@ -158,11 +159,14 @@ body {
 }*/
 .window {
   width: 50%;
+  pointer-events: auto;
   position: absolute;
   z-index: 20;
-  cursor: default; /* Keeps cursor consistent over the window body  fart*/
-  left: 350px;
-  top: 150px;
+  cursor: default; /* Keeps cursor consistent over the window body*/
+}
+#drawingsWindow {
+ width: 40%;  /* starting width */
+  height: 250px; /* starting height */
 }
 
 .title-bar {
@@ -172,12 +176,15 @@ body {
   font-weight: bold;
   display: flex;
   justify-content: space-between;
-  cursor: move;
   cursor: default; /* Keeps cursor consistent over the window body */
 }
 
 .window-content {
   padding: 10px;
+}
+/*images folder ----------------------------------------------------------------------------------------------------------------------*/
+#imagesWindow {
+  
 }
 .folder-container {
   display: flex;
@@ -190,11 +197,12 @@ body {
   width: 80px;
   text-align: center;
   cursor: pointer;
+
 }
 
 .folder img {
-  width: 48px;
-  height: 48px;
+  width: 32px;
+  height: 32px;
 }
 
 .folder p {
@@ -202,7 +210,45 @@ body {
   margin-top: 4px;
   font-family: WindowsRegular;
 }
-/* taskbar-----------------------------------------------------------*/
+.filetoolbar {
+  display: flex;
+  margin-bottom: -1px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #808080;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #808080;
+  padding: 6px;
+ 
+}
+.filetoolbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2em;
+}
+.field-row {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #808080;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #808080;
+  padding: 5px;
+}
+.address {
+  line-height: 1;
+  transform: translateX(-6px); /* This is the key nudge! */
+}
+.divider {
+  width: 2px;
+  height: 12px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #808080;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #808080;
+  background-color: #c9c9c9;
+  margin: 0 4px;
+}
+/* taskbar----------------------------------------------------------------------------------------------------------------------*/
 .taskbar {
       position: fixed;
       bottom: 0;

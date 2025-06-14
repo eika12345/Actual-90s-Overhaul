@@ -6,6 +6,7 @@
   <title>90's Overhaul</title>
   <link rel="stylesheet" href="stylesheet.css" />
   <link rel="stylesheet" href="https://unpkg.com/98.css" />
+   <link rel="shortcut icon" type="image/x-icon" href="./images/windows.png">
 </head>
 
 <body>
@@ -77,7 +78,7 @@
             </div>
             <div class="window-body-projects-image">
               <img src="./images/erikasportfolio1.png" alt="erikas petrauskas portfolio image">
-              <p>Erikas Petrauskas (.com) was my first real portfolio, which was heavily inspired by the DIY web aesthetics used in the 1990's and early 2000's. I created it more out of passion for the aesthetics
+              <p>Erikas Petrauskas (.com) was my first real portfolio. Heavily inspired by the DIY web aesthetics used in the 1990's and early 2000's. I created it more out of passion for the style
                  rather than some
                 ultra-refined piece of work. Looking back, I used it as my first stepping stone into the massive world of web development.
               </p>
@@ -118,31 +119,66 @@
               <p>This was a client website made for a GTA V FiveM Server. It featured a store, where you could buy property and vehicles. 
               </p>
             </div>
+    </div>
 
   </div>
-<!-- Drawings Window ------------------------------------------------------------------------------------------------------------------------>
-<div class="window hidden" id="drawingsWindow">
-  <div class="title-bar" onmousedown="startDrag(event, 'drawingsWindow')">
-    <span>Drawings</span>
+<!-- images Window ------------------------------------------------------------------------------------------------------------------------>
+<div class="window hidden" id="imagesWindow">
+  <div class="title-bar" onmousedown="startDrag(event, 'imagesWindow')">
+    <span class="title-text">
+  <img src="./images/camera.png" alt="camera image" class="title-icon" />
+  Images
+</span>
     <div class="title-bar-controls">
-      <button aria-label="Minimize" onclick="minimizeWindow('drawingsWindow')"></button>
-      <button aria-label="Maximize" onclick="maximizeWindow('drawingsWindow')"></button>
-      <button aria-label="Close" onclick="closeWindow('drawingsWindow')"></button>
+      <button aria-label="Minimize" onclick="minimizeWindow('imagesWindow')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('imagesWindow')"></button>
+      <button aria-label="Close" onclick="closeWindow('imagesWindow')"></button>
     </div>
   </div>
+
+   <div class="window-body">
+  <!-- File Toolbar -->
+<div class="filetoolbar">
+  <span class="divider"></span>
+  <ul>
+    <li><span accesskey="f"><u>F</u>ile</span></li>
+    <li><span accesskey="e"><u>E</u>dit</span></li>
+    <li><span accesskey="v"><u>V</u>iew</span></li>
+    <li><span accesskey="g"><u>G</u>o</span></li>
+    <li><span accesskey="a"><u>F</u>avourites</span></li>
+    <li><span accesskey="h"><u>H</u>elp</span></li>
+  </ul>
+</div>
+
+
+
+<!-- Address Bar -->
+<div class="field-row">
+  <span class="divider"></span>
+  <div class="address"><u>A</u>ddress</div>
+  <input id="address" type="text" value="C:\Images" style="width: 100%; font-weight: 900;" />
+</div>
+
+
+<!-- images -->
   <div class="window-body">
     <div class="folder-container">
       <div class="folder" onclick="openFolder('folder1')">
-        <img src="./images/folder.png" alt="Folder Icon" />
-        <p>350z</p>
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>350z.jpg</p>
       </div>
       <div class="folder" onclick="openFolder('folder2')">
-        <img src="./images/folder.png" alt="Folder Icon" />
-        <p>Hellcat</p>
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>Hellcat.jpg</p>
       </div>
-         <div class="folder" onclick="openFolder('folder1')">
-        <img src="./images/folder.png" alt="Folder Icon" />
-        <p>Porsche</p>
+         <div class="folder" onclick="openFolder('folder3')">
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>992.jpg</p>
+       </div>
+        <div class="folder" onclick="openFolder('folder4')">
+          <img src="./images/imageicon.png" alt="imageicon" />
+          <p>Koi fish.jpg</p>
+        </div>
       </div>
       </div>
     </div>
@@ -150,6 +186,7 @@
 </div>
 
 <!-- Folder Windows (place these OUTSIDE any other windows) -->
+ <!-- 350z -->
 <div class="window hidden" id="folder1">
   <div class="title-bar" onmousedown="startDrag(event, 'folder1')">
     <span>Sketches</span>
@@ -163,7 +200,7 @@
     <img src="./images/350z.jpg" alt="Drawing 1" style="width: 100%" />
   </div>
 </div>
-
+<!-- hellcat -->
 <div class="window hidden" id="folder2">
   <div class="title-bar" onmousedown="startDrag(event, 'folder2')">
     <span>Concept Art</span>
@@ -174,7 +211,35 @@
     </div>
   </div>
   <div class="window-body">
-    <img src="./images/drawing2.png" alt="Drawing 2" style="width: 100%" />
+    <img src="./images/dodge.jpg" alt="Drawing 2" style="width: 100%" />
+  </div>
+</div>
+<!-- 992 -->
+<div class="window hidden" id="folder3">
+  <div class="title-bar" onmousedown="startDrag(event, 'folder3')">
+    <span>Sketches</span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('folder3')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('folder3')"></button>
+      <button aria-label="Close" onclick="closeWindow('folder3')"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <img src="./images/porche.jpg" alt="Drawing 1" style="width: 100%" />
+  </div>
+</div>
+<!-- koi fish -->
+<div class="window hidden" id="folder4">
+  <div class="title-bar" onmousedown="startDrag(event, 'folder4')">
+    <span>Sketches</span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('folder4')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('folder4')"></button>
+      <button aria-label="Close" onclick="closeWindow('folder4')"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <img src="./images/koifish.jpg" alt="Drawing 1" style="width: 100%" />
   </div>
 </div>
 
@@ -211,8 +276,8 @@
           <img src="./images/computer.png" class="menu-icon" />Biography
         </li>
 
-        <li onclick="openDrawings(event)" style="cursor: pointer;">
-          <img src="./images/drawing.png" class="menu-icon">Drawings
+        <li onclick="openImages(event)" style="cursor: pointer;">
+          <img src="./images/camera.png" class="menu-icon">Images
         </li>
 
         <a href="ErikasPetrauskasCVmain.pdf" target="_blank" style="text-decoration: none; color: inherit;">
@@ -230,194 +295,249 @@
 
   <!-- Script ------------------------------------------------------------------------------------------------------------------------>
 <script>
-
   let windowZIndex = 100;
 
-window.onload = function () {
-  openWindow('myWindow');
-};
+  window.onload = function () {
+    openWindow('myWindow');
+  };
 
-function openWindow(id) {
-  const win = document.getElementById(id);
-  win.classList.remove('hidden');
-  win.style.zIndex = ++windowZIndex;
+  function openWindow(id) {
+    const win = document.getElementById(id);
+    win.classList.remove('hidden');
+    win.style.zIndex = ++windowZIndex;
 
-  if (!win.classList.contains('maximized')) {
-    win.style.left = '150px';
-    win.style.top = '100px';
-    win.style.width = '50%';
+    if (!win.classList.contains('maximized')) {
+      if (win.dataset.prevLeft && win.dataset.prevTop) {
+        win.style.left = win.dataset.prevLeft;
+        win.style.top = win.dataset.prevTop;
+      } else {
+        // Apply default positions
+        switch (id) {
+          case 'myWindow':
+            win.style.left = '300px';
+            win.style.top = '100px';
+            win.style.width = '60%';
+            break;
+          case 'imagesWindow':
+            win.style.left = '300px';
+            win.style.top = '150px';
+            win.style.width = '600px';
+            win.style.height = '400px';
+            break;
+          case 'folder1':
+            win.style.left = '500px';
+            win.style.top = '200px';
+            break;
+          case 'folder2':
+            win.style.left = '520px';
+            win.style.top = '220px';
+            break;
+          case 'folder3':
+            win.style.left = '540px';
+            win.style.top = '240px';
+            break;
+          case 'folder4':
+            win.style.left = '560px';
+            win.style.top = '260px';
+            break;
+          default:
+            win.style.left = '150px';
+            win.style.top = '100px';
+        }
+      }
+
+      const body = win.querySelector('.window-body');
+      if (body) {
+        body.style.maxHeight = '';
+        body.style.overflowY = '';
+      }
+    }
+
+    const taskbar = document.querySelector('.taskbar-items');
+    if (!document.getElementById(`task-${id}`)) {
+      const btn = document.createElement('button');
+      btn.className = 'taskbar-button';
+      btn.id = `task-${id}`;
+
+      btn.innerHTML = (id === 'imagesWindow') ?
+        `<img src="./images/camera.png" class="start-icon"> Images` :
+        (id === 'myWindow') ?
+        `<img src="./images/computer.png" class="start-icon"> Biography` :
+        `<img src="./images/folder-icon.png" class="start-icon"> ${id}`;
+
+      btn.onclick = () => {
+        if (win.classList.contains('hidden')) {
+          win.classList.remove('hidden');
+          win.style.zIndex = ++windowZIndex;
+        } else {
+          win.classList.add('hidden');
+        }
+      };
+
+      taskbar.appendChild(btn);
+    }
+  }
+
+  function closeWindow(id) {
+    const win = document.getElementById(id);
+    const wasMaximized = win.classList.contains('maximized');
+    win.classList.remove('maximized');
+
+    if (wasMaximized) {
+      delete win.dataset.prevLeft;
+      delete win.dataset.prevTop;
+      delete win.dataset.prevWidth;
+      delete win.dataset.prevHeight;
+    }
+
+    win.style.width = '';
     win.style.height = '';
+    win.style.left = '';
+    win.style.top = '';
 
     const body = win.querySelector('.window-body');
     if (body) {
+      body.scrollTop = 0;
       body.style.maxHeight = '';
       body.style.overflowY = '';
     }
+
+    win.classList.add('hidden');
+
+    const taskButton = document.getElementById(`task-${id}`);
+    if (taskButton) {
+      taskButton.remove();
+    }
   }
 
-  const taskbar = document.querySelector('.taskbar-items');
-  if (!document.getElementById(`task-${id}`)) {
-    const btn = document.createElement('button');
-    btn.className = 'taskbar-button';
-    btn.id = `task-${id}`;
+  function minimizeWindow(id) {
+    const win = document.getElementById(id);
+    win.classList.add('hidden');
+  }
 
-    // Label logic
-    if (id === 'drawingsWindow') {
-      btn.innerHTML = `<img src="./images/drawing.png" class="start-icon"> Drawings`;
-    } else if (id === 'myWindow') {
-      btn.innerHTML = `<img src="./images/computer.png" class="start-icon"> Biography`;
-    } else {
-      btn.innerHTML = `<img src="./images/folder-icon.png" class="start-icon"> ${id}`;
-    }
+  function maximizeWindow(id) {
+    const win = document.getElementById(id);
+    const body = win.querySelector('.window-body');
+    const taskbarHeight = 40;
+    const titleBarHeight = 30;
 
-    btn.onclick = () => {
-      if (win.classList.contains('hidden')) {
-        win.classList.remove('hidden');
-        win.style.zIndex = Date.now();
-      } else {
-        win.classList.add('hidden');
+    if (win.classList.contains('maximized')) {
+      win.style.width = win.dataset.prevWidth || '50%';
+      win.style.height = win.dataset.prevHeight || '';
+      win.style.left = win.dataset.prevLeft || '150px';
+      win.style.top = win.dataset.prevTop || '100px';
+      win.classList.remove('maximized');
+
+      if (body) {
+        body.style.maxHeight = '';
+        body.style.overflowY = '';
       }
+    } else {
+      // Save previous size/position
+      win.dataset.prevWidth = win.style.width;
+      win.dataset.prevHeight = win.style.height;
+      win.dataset.prevLeft = win.style.left;
+      win.dataset.prevTop = win.style.top;
+
+      win.style.width = '100vw';
+      win.style.height = `calc(100vh - ${taskbarHeight}px)`;
+      win.style.left = '0';
+      win.style.top = '0';
+      win.classList.add('maximized');
+
+      if (body) {
+        const availableHeight = window.innerHeight - taskbarHeight - titleBarHeight;
+        body.style.maxHeight = `${availableHeight}px`;
+        body.style.overflowY = 'auto';
+      }
+    }
+  }
+
+  function openBiography(event) {
+    event.stopPropagation();
+    openWindow('myWindow');
+    document.getElementById('start-menu').classList.add('hidden');
+  }
+
+  function openImages(event) {
+    event.stopPropagation();
+    openWindow('imagesWindow');
+    document.getElementById('start-menu').classList.add('hidden');
+  }
+
+  function openFolder(folderId) {
+    openWindow(folderId);
+  }
+
+  function toggleMenu() {
+    const menu = document.getElementById('start-menu');
+    menu.classList.toggle('hidden');
+  }
+
+  document.addEventListener('click', function (e) {
+    const menu = document.getElementById('start-menu');
+    const button = document.querySelector('.start-button');
+    if (!menu.contains(e.target) && !button.contains(e.target)) {
+      menu.classList.add('hidden');
+    }
+  });
+
+  let dragData = null;
+
+  function startDrag(e, id) {
+    e.stopPropagation();
+    const element = document.getElementById(id);
+    if (element.classList.contains('maximized')) return;
+
+    element.style.zIndex = ++windowZIndex;
+
+    dragData = {
+      element,
+      offsetX: e.clientX - element.offsetLeft,
+      offsetY: e.clientY - element.offsetTop
     };
 
-    taskbar.appendChild(btn);
-  }
-}
-
-function closeWindow(id) {
-  const win = document.getElementById(id);
-  win.classList.add('hidden');
-
-  const taskButton = document.getElementById(`task-${id}`);
-  if (taskButton) {
-    taskButton.remove();
-  }
-}
-
-function minimizeWindow(id) {
-  const win = document.getElementById(id);
-  win.classList.add('hidden');
-}
-
-function maximizeWindow(id) {
-  const win = document.getElementById(id);
-
-  const body = win.querySelector('.window-body');
-  const taskbarHeight = 40;
-  const titleBarHeight = 30;
-
-  if (win.classList.contains('maximized')) {
-    win.style.width = '50%';
-    win.style.left = '150px';
-    win.style.top = '100px';
-    win.style.height = '';
-    win.classList.remove('maximized');
-
-    if (body) {
-      body.style.maxHeight = '';
-      body.style.overflowY = '';
-    }
-
-  } else {
-    win.style.width = '100vw';
-    win.style.height = `calc(100vh - ${taskbarHeight}px)`;
-    win.style.left = '0';
-    win.style.top = '0';
-    win.classList.add('maximized');
-
-    if (body) {
-      const availableHeight = window.innerHeight - taskbarHeight - titleBarHeight;
-      body.style.maxHeight = `${availableHeight}px`;
-      body.style.overflowY = 'auto';
-    }
-  }
-}
-
-function openBiography(event) {
-  event.stopPropagation();
-  openWindow('myWindow');
-  document.getElementById('start-menu').classList.add('hidden');
-}
-
-function openDrawings(event) {
-  event.stopPropagation();
-  openWindow('drawingsWindow');
-  document.getElementById('start-menu').classList.add('hidden');
-}
-
-function openFolder(folderId) {
-  openWindow(folderId);
-}
-
-// Start Menu toggle
-function toggleMenu() {
-  const menu = document.getElementById('start-menu');
-  menu.classList.toggle('hidden');
-}
-
-// Hide start menu on outside click
-document.addEventListener('click', function (e) {
-  const menu = document.getElementById('start-menu');
-  const button = document.querySelector('.start-button');
-  if (!menu.contains(e.target) && !button.contains(e.target)) {
-    menu.classList.add('hidden');
-  }
-});
-
-// Dragging logic
-let dragData = null;
-
-function startDrag(e, id) {
-  const element = document.getElementById(id);
-  if (element.classList.contains('maximized')) return;
-
-  dragData = {
-    element,
-    offsetX: e.clientX - element.offsetLeft,
-    offsetY: e.clientY - element.offsetTop
-  };
-
-  document.addEventListener('mousemove', drag);
-  document.addEventListener('mouseup', stopDrag);
-}
-
-function drag(e) {
-  if (!dragData) return;
-  const { element, offsetX, offsetY } = dragData;
-  element.style.left = `${e.clientX - offsetX}px`;
-  element.style.top = `${e.clientY - offsetY}px`;
-}
-
-function stopDrag() {
-  document.removeEventListener('mousemove', drag);
-  document.removeEventListener('mouseup', stopDrag);
-
-  if (dragData) {
-    const { element } = dragData;
-    const rect = element.getBoundingClientRect();
-    const winWidth = window.innerWidth;
-    const winHeight = window.innerHeight;
-
-    // Snap to visible edge if window goes offscreen
-    const newLeft = Math.min(Math.max(0, rect.left), winWidth - rect.width);
-    const newTop = Math.min(Math.max(0, rect.top), winHeight - rect.height);
-
-    element.style.left = `${newLeft}px`;
-    element.style.top = `${newTop}px`;
+    document.addEventListener('mousemove', drag);
+    document.addEventListener('mouseup', stopDrag);
   }
 
-  dragData = null;
-}
+  function drag(e) {
+    if (!dragData) return;
+    const { element, offsetX, offsetY } = dragData;
+    element.style.left = `${e.clientX - offsetX}px`;
+    element.style.top = `${e.clientY - offsetY}px`;
 
-// Clock logic
-function updateClock() {
-  const now = new Date();
-  const hours = now.getHours().toString().padStart(2, '0');
-  const minutes = now.getMinutes().toString().padStart(2, '0');
-  document.getElementById('clock').textContent = `${hours}:${minutes}`;
-}
-setInterval(updateClock, 1000);
-updateClock();
+    element.dataset.moved = 'true';
+    element.dataset.prevLeft = element.style.left;
+    element.dataset.prevTop = element.style.top;
+  }
+
+  function stopDrag() {
+    document.removeEventListener('mousemove', drag);
+    document.removeEventListener('mouseup', stopDrag);
+    dragData = null;
+  }
+
+  function updateClock() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    document.getElementById('clock').textContent = `${hours}:${minutes}`;
+  }
+  setInterval(updateClock, 1000);
+  updateClock();
+
+  // Ensure all windows come to front on click
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.window').forEach(win => {
+      win.addEventListener('mousedown', () => {
+        win.style.zIndex = ++windowZIndex;
+      });
+    });
+  });
 </script>
+
+
 
 
 
