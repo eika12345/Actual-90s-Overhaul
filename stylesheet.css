@@ -35,7 +35,7 @@ body {
 }
 
 /*makes the window scrollable*/
-#myWindow .window-body {
+#biographywindow .window-body {
   max-height: 700px;        
   overflow-y: auto; /* Enables vertical scrollbar */
   overflow-x: hidden; /* Optional: hides horizontal scrollbar */
@@ -183,7 +183,7 @@ body {
   padding: 10px;
 }
 /*images folder ----------------------------------------------------------------------------------------------------------------------*/
-#imagesWindow {
+#Images {
   
 }
 .folder-container {
@@ -247,6 +247,11 @@ body {
   border-right: 1px solid #808080;
   background-color: #c9c9c9;
   margin: 0 4px;
+}
+.folder.selected {
+  background-color: #000080;
+  color: white;
+  border: 1px dotted white;
 }
 /* taskbar----------------------------------------------------------------------------------------------------------------------*/
 .taskbar {

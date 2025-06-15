@@ -10,20 +10,20 @@
 </head>
 
 <body>
-  <!-- Biography Window ------------------------------------------------------------------------------------------------------------------------>
-  <div class="window hidden" id="myWindow">
-    <div class="title-bar" onmousedown="startDrag(event, 'myWindow')">
+  <!-- biographywindow Window ------------------------------------------------------------------------------------------------------------------------>
+  <div class="window hidden" id="biographywindow" data-title="Biography" data-icon="./images/computer.png">
+    <div class="title-bar" onmousedown="startDrag(event, 'biographywindow')">
 <span class="title-text">
   <img src="./images/computer.png" alt="computer image" class="title-icon" />
   Biography
 </span>
       <div class="title-bar-controls">
-        <button aria-label="Minimize" onclick="minimizeWindow('myWindow')"></button>
-<button aria-label="Maximize" onclick="maximizeWindow('myWindow')"></button>
-<button aria-label="Close" onclick="closeWindow('myWindow')"></button>
+        <button aria-label="Minimize" onclick="minimizeWindow('biographywindow')"></button>
+<button aria-label="Maximize" onclick="maximizeWindow('biographywindow')"></button>
+<button aria-label="Close" onclick="closeWindow('biographywindow')"></button>
       </div>
     </div>
-    <!-- Biography Content -->
+    <!-- biographywindow Content -->
     <div class="window-body">
 
       <div class="window-body-section-title">
@@ -52,7 +52,7 @@
     <!-- Fashion E-commerce Website -->
 
       <div class="window-body-projects-title">
-        <h5>Fashion E-commerce Website</h5>
+        <h5> (1) Fashion E-commerce Website</h5>
       </div>
 
       <div class="window-body-projects">
@@ -69,7 +69,7 @@
     <!-- Portfolio Website -->
 
             <div class="window-body-projects-title">
-        <h5>Portfolio Website</h5>
+        <h5> (2) Portfolio Website</h5>
       </div>
 
       <div class="window-body-projects">
@@ -88,7 +88,7 @@
     <!--Another Portfolio Website -->
 
             <div class="window-body-projects-title">
-        <h5>Another Portfolio Website</h5>
+        <h5> (3) Another Portfolio Website</h5>
       </div>
       
       <div class="window-body-projects">
@@ -104,10 +104,10 @@
               </p>
             </div>
 
-    <!-- Biography Content -->
+    <!-- biographywindow Content -->
 
             <div class="window-body-projects-title">
-        <h5>FiveM Roleplay Community & Service Hub</h5>
+        <h5> (4) FiveM Roleplay Community & Service Hub</h5>
       </div>
 
       <div class="window-body-projects">
@@ -120,24 +120,24 @@
               </p>
             </div>
     </div>
-
   </div>
 <!-- images Window ------------------------------------------------------------------------------------------------------------------------>
-<div class="window hidden" id="imagesWindow">
-  <div class="title-bar" onmousedown="startDrag(event, 'imagesWindow')">
+  <!--blue top title bar-->
+<div class="window hidden" id="Images" data-icon="./images/camera.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'Images')">
     <span class="title-text">
   <img src="./images/camera.png" alt="camera image" class="title-icon" />
   Images
 </span>
     <div class="title-bar-controls">
-      <button aria-label="Minimize" onclick="minimizeWindow('imagesWindow')"></button>
-      <button aria-label="Maximize" onclick="maximizeWindow('imagesWindow')"></button>
-      <button aria-label="Close" onclick="closeWindow('imagesWindow')"></button>
+      <button aria-label="Minimize" onclick="minimizeWindow('Images')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('Images')"></button>
+      <button aria-label="Close" onclick="closeWindow('Images')"></button>
     </div>
   </div>
 
+<!-- File Toolbar -->
    <div class="window-body">
-  <!-- File Toolbar -->
 <div class="filetoolbar">
   <span class="divider"></span>
   <ul>
@@ -150,8 +150,6 @@
   </ul>
 </div>
 
-
-
 <!-- Address Bar -->
 <div class="field-row">
   <span class="divider"></span>
@@ -160,68 +158,129 @@
 </div>
 
 
-<!-- images -->
+<!------------ main folder ------------>
   <div class="window-body">
     <div class="folder-container">
-      <div class="folder" onclick="openFolder('folder1')">
-        <img src="./images/imageicon.png" alt="imageicon" />
-        <p>350z.jpg</p>
-      </div>
-      <div class="folder" onclick="openFolder('folder2')">
-        <img src="./images/imageicon.png" alt="imageicon" />
-        <p>Hellcat.jpg</p>
-      </div>
-         <div class="folder" onclick="openFolder('folder3')">
-        <img src="./images/imageicon.png" alt="imageicon" />
-        <p>992.jpg</p>
-       </div>
-        <div class="folder" onclick="openFolder('folder4')">
-          <img src="./images/imageicon.png" alt="imageicon" />
-          <p>Koi fish.jpg</p>
-        </div>
+ <!-- drawings folder -->     
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('drawingsfolder')">
+  <img src="./images/fullfolder.png" alt="folder icon" />
+  <p>Drawings</p>
+</div>
+
+
+
+
+
+
+
       </div>
       </div>
     </div>
   </div>
+
+<!------------ Folder Windows (place these OUTSIDE any other windows) ------------>
+
+ <!-- drawings folder -->
+ <div class="window hidden" id="drawingsfolder" data-title="Drawings" data-icon="./images/fullfolder.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'drawingsfolder')">
+    <span class="title-text">
+  <img src="./images/fullfolder.png" alt="camera image" class="title-icon" />
+  Drawings
+</span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('drawingsfolder')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('drawingsfolder')"></button>
+      <button aria-label="Close" onclick="closeWindow('drawingsfolder')"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <!-- Toolbar -->
+    <div class="filetoolbar">
+      <span class="divider"></span>
+      <ul>
+        <li><span><u>F</u>ile</span></li>
+        <li><span><u>E</u>dit</span></li>
+        <li><span><u>V</u>iew</span></li>
+        <li><span><u>G</u>o</span></li>
+        <li><span><u>F</u>avourites</span></li>
+        <li><span><u>H</u>elp</span></li>
+      </ul>
+    </div>
+
+    <!-- Address Bar -->
+    <div class="field-row">
+      <span class="divider"></span>
+      <div class="address"><u>A</u>ddress</div>
+      <input type="text" value="C:\Images\Drawings" style="width: 100%; font-weight: 900;" />
+    </div>
+
+    <!-- Folder Items -->
+    <div class="folder-container">
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('350zimage')">
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>350z.jpg</p>
+      </div>
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('hellcatimage')">
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>hellcat.jpg</p>
+      </div>
+         <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('992image')">
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>992.jpg</p>
+       </div>
+        <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('koifishimage')">
+          <img src="./images/imageicon.png" alt="imageicon" />
+          <p>Koi fish.jpg</p>
+        </div>
+    </div>
+  </div>
 </div>
 
-<!-- Folder Windows (place these OUTSIDE any other windows) -->
- <!-- 350z -->
-<div class="window hidden" id="folder1">
-  <div class="title-bar" onmousedown="startDrag(event, 'folder1')">
-    <span>Sketches</span>
+ <!-- 350zimage -->
+<div class="window hidden" id="350zimage" data-title="350z.jpg" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, '350zimage')">
+    <span class="title-text">
+  <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+  350z.jpg
+</span>
     <div class="title-bar-controls">
-      <button aria-label="Minimize" onclick="minimizeWindow('folder1')"></button>
-      <button aria-label="Maximize" onclick="maximizeWindow('folder1')"></button>
-      <button aria-label="Close" onclick="closeWindow('folder1')"></button>
+      <button aria-label="Minimize" onclick="minimizeWindow('350zimage')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('350zimage')"></button>
+      <button aria-label="Close" onclick="closeWindow('350zimage')"></button>
     </div>
   </div>
   <div class="window-body">
     <img src="./images/350z.jpg" alt="Drawing 1" style="width: 100%" />
   </div>
 </div>
-<!-- hellcat -->
-<div class="window hidden" id="folder2">
-  <div class="title-bar" onmousedown="startDrag(event, 'folder2')">
-    <span>Concept Art</span>
+<!-- hellcatimage -->
+<div class="window hidden" id="hellcatimage" data-title="hellcat.jpg" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'hellcatimage')">
+    <span class="title-text">
+  <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+  hellcat.jpg
+</span>
     <div class="title-bar-controls">
-      <button aria-label="Minimize" onclick="minimizeWindow('folder2')"></button>
-      <button aria-label="Maximize" onclick="maximizeWindow('folder2')"></button>
-      <button aria-label="Close" onclick="closeWindow('folder2')"></button>
+      <button aria-label="Minimize" onclick="minimizeWindow('hellcatimage')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('hellcatimage')"></button>
+      <button aria-label="Close" onclick="closeWindow('hellcatimage')"></button>
     </div>
   </div>
   <div class="window-body">
     <img src="./images/dodge.jpg" alt="Drawing 2" style="width: 100%" />
   </div>
 </div>
-<!-- 992 -->
-<div class="window hidden" id="folder3">
-  <div class="title-bar" onmousedown="startDrag(event, 'folder3')">
-    <span>Sketches</span>
+<!-- 992image -->
+<div class="window hidden" id="992image" data-title="992.jpg" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, '992image')">
+    <span class="title-text">
+  <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+  992.jpg
+</span>
     <div class="title-bar-controls">
-      <button aria-label="Minimize" onclick="minimizeWindow('folder3')"></button>
-      <button aria-label="Maximize" onclick="maximizeWindow('folder3')"></button>
-      <button aria-label="Close" onclick="closeWindow('folder3')"></button>
+      <button aria-label="Minimize" onclick="minimizeWindow('992image')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('992image')"></button>
+      <button aria-label="Close" onclick="closeWindow('992image')"></button>
     </div>
   </div>
   <div class="window-body">
@@ -229,13 +288,16 @@
   </div>
 </div>
 <!-- koi fish -->
-<div class="window hidden" id="folder4">
-  <div class="title-bar" onmousedown="startDrag(event, 'folder4')">
-    <span>Sketches</span>
+<div class="window hidden" id="koifishimage" data-title="koi fish.jpg" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'koifishimage')">
+    <span class="title-text">
+  <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+  Koi fish.jpg
+</span>
     <div class="title-bar-controls">
-      <button aria-label="Minimize" onclick="minimizeWindow('folder4')"></button>
-      <button aria-label="Maximize" onclick="maximizeWindow('folder4')"></button>
-      <button aria-label="Close" onclick="closeWindow('folder4')"></button>
+      <button aria-label="Minimize" onclick="minimizeWindow('koifishimage')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('koifishimage')"></button>
+      <button aria-label="Close" onclick="closeWindow('koifishimage')"></button>
     </div>
   </div>
   <div class="window-body">
@@ -272,7 +334,7 @@
           <li><img src="./images/instagram.png" class="menu-icon" />Instagram</li>
         </a>
 
-        <li onclick="openBiography(event)" style="cursor: pointer;">
+        <li onclick="openbiographywindow(event)" style="cursor: pointer;">
           <img src="./images/computer.png" class="menu-icon" />Biography
         </li>
 
@@ -298,7 +360,7 @@
   let windowZIndex = 100;
 
   window.onload = function () {
-    openWindow('myWindow');
+    openWindow('biographywindow');
   };
 
   function openWindow(id) {
@@ -311,34 +373,39 @@
         win.style.left = win.dataset.prevLeft;
         win.style.top = win.dataset.prevTop;
       } else {
-        // Apply default positions
         switch (id) {
-          case 'myWindow':
+          case 'biographywindow':
             win.style.left = '300px';
             win.style.top = '100px';
             win.style.width = '60%';
             break;
-          case 'imagesWindow':
+          case 'Images':
             win.style.left = '300px';
             win.style.top = '150px';
-            win.style.width = '600px';
+            win.style.width = '40%';
             win.style.height = '400px';
             break;
-          case 'folder1':
+          case '350zimage':
             win.style.left = '500px';
             win.style.top = '200px';
             break;
-          case 'folder2':
+          case 'hellcatimage':
             win.style.left = '520px';
             win.style.top = '220px';
             break;
-          case 'folder3':
+          case '992image':
             win.style.left = '540px';
             win.style.top = '240px';
             break;
-          case 'folder4':
+          case 'koifishimage':
             win.style.left = '560px';
             win.style.top = '260px';
+            break;
+            case 'drawingsfolder':
+            win.style.left = '560px';
+            win.style.top = '260px';
+            win.style.width = '40%';
+            win.style.height = '400px';
             break;
           default:
             win.style.left = '150px';
@@ -359,11 +426,11 @@
       btn.className = 'taskbar-button';
       btn.id = `task-${id}`;
 
-      btn.innerHTML = (id === 'imagesWindow') ?
-        `<img src="./images/camera.png" class="start-icon"> Images` :
-        (id === 'myWindow') ?
-        `<img src="./images/computer.png" class="start-icon"> Biography` :
-        `<img src="./images/folder-icon.png" class="start-icon"> ${id}`;
+// taskbar image of an opened window 
+
+    const title = win.dataset.title || id;
+const icon = win.dataset.icon || './images/folder-icon.png';
+btn.innerHTML = `<img src="${icon}" class="start-icon"> ${title}`;
 
       btn.onclick = () => {
         if (win.classList.contains('hidden')) {
@@ -408,6 +475,11 @@
     if (taskButton) {
       taskButton.remove();
     }
+
+    // ✅ Deselect folders when a folder window is closed
+    document.querySelectorAll('.folder.selected').forEach(folder => {
+      folder.classList.remove('selected');
+    });
   }
 
   function minimizeWindow(id) {
@@ -433,7 +505,6 @@
         body.style.overflowY = '';
       }
     } else {
-      // Save previous size/position
       win.dataset.prevWidth = win.style.width;
       win.dataset.prevHeight = win.style.height;
       win.dataset.prevLeft = win.style.left;
@@ -453,15 +524,15 @@
     }
   }
 
-  function openBiography(event) {
+  function openbiographywindow(event) {
     event.stopPropagation();
-    openWindow('myWindow');
+    openWindow('biographywindow');
     document.getElementById('start-menu').classList.add('hidden');
   }
 
   function openImages(event) {
     event.stopPropagation();
-    openWindow('imagesWindow');
+    openWindow('Images');
     document.getElementById('start-menu').classList.add('hidden');
   }
 
@@ -474,14 +545,32 @@
     menu.classList.toggle('hidden');
   }
 
+  // ✅ Deselect folder on empty-space click
   document.addEventListener('click', function (e) {
     const menu = document.getElementById('start-menu');
     const button = document.querySelector('.start-button');
+
     if (!menu.contains(e.target) && !button.contains(e.target)) {
       menu.classList.add('hidden');
     }
+
+    // Deselect folder if not clicking on a .folder
+    if (!e.target.closest('.folder')) {
+      document.querySelectorAll('.folder.selected').forEach(folder => {
+        folder.classList.remove('selected');
+      });
+    }
   });
 
+  // ✅ Select folder on click
+  function selectFolder(element) {
+    document.querySelectorAll('.folder').forEach(folder => {
+      folder.classList.remove('selected');
+    });
+    element.classList.add('selected');
+  }
+
+  // Drag logic
   let dragData = null;
 
   function startDrag(e, id) {
@@ -524,10 +613,11 @@
     const minutes = now.getMinutes().toString().padStart(2, '0');
     document.getElementById('clock').textContent = `${hours}:${minutes}`;
   }
+
   setInterval(updateClock, 1000);
   updateClock();
 
-  // Ensure all windows come to front on click
+  // Bring window to front on click
   window.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.window').forEach(win => {
       win.addEventListener('mousedown', () => {
@@ -536,6 +626,7 @@
     });
   });
 </script>
+
 
 
 
