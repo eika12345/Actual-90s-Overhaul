@@ -116,14 +116,15 @@
             </div>
              <div class="window-body-projects-image">
               <img src="./images/nonamerppage1.png" alt="no name rp image">
-              <p>This was a client website made for a GTA V FiveM Server. It featured a store, where you could buy property and vehicles. 
+              <p>This was a client website made for a GTA V FiveM Server. It featured a store, where you could buy properties and vehicles, a contact form
+                and a forum for the community. 
               </p>
             </div>
     </div>
   </div>
 <!-- images Window ------------------------------------------------------------------------------------------------------------------------>
   <!--blue top title bar-->
-<div class="window hidden" id="Images" data-icon="./images/camera.png">
+<div class="window hidden folder-window" id="Images" data-icon="./images/camera.png">
   <div class="title-bar" onmousedown="startDrag(event, 'Images')">
     <span class="title-text">
   <img src="./images/camera.png" alt="camera image" class="title-icon" />
@@ -175,24 +176,29 @@
 
       </div>
       </div>
+      <div class="folder-status-bar">
+  <span class="status-left">7 object(s) (plus 14 hidden)</span>
+  <span class="status-right">My Computer</span>
+</div>
     </div>
   </div>
 
 <!------------ Folder Windows (place these OUTSIDE any other windows) ------------>
 
  <!-- drawings folder -->
- <div class="window hidden" id="drawingsfolder" data-title="Drawings" data-icon="./images/fullfolder.png">
+ <div class="window hidden folder-window" id="drawingsfolder" data-title="Drawings" data-icon="./images/fullfolder.png">
   <div class="title-bar" onmousedown="startDrag(event, 'drawingsfolder')">
     <span class="title-text">
-  <img src="./images/fullfolder.png" alt="camera image" class="title-icon" />
-  Drawings
-</span>
+      <img src="./images/fullfolder.png" alt="camera image" class="title-icon" />
+      Drawings
+    </span>
     <div class="title-bar-controls">
       <button aria-label="Minimize" onclick="minimizeWindow('drawingsfolder')"></button>
       <button aria-label="Maximize" onclick="maximizeWindow('drawingsfolder')"></button>
       <button aria-label="Close" onclick="closeWindow('drawingsfolder')"></button>
     </div>
   </div>
+
   <div class="window-body">
     <!-- Toolbar -->
     <div class="filetoolbar">
@@ -214,7 +220,7 @@
       <input type="text" value="C:\Images\Drawings" style="width: 100%; font-weight: 900;" />
     </div>
 
-    <!-- Folder Items -->
+    <!-- Folder Content Container -->
     <div class="folder-container">
       <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('350zimage')">
         <img src="./images/imageicon.png" alt="imageicon" />
@@ -224,18 +230,27 @@
         <img src="./images/imageicon.png" alt="imageicon" />
         <p>hellcat.jpg</p>
       </div>
-         <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('992image')">
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('992image')">
         <img src="./images/imageicon.png" alt="imageicon" />
         <p>992.jpg</p>
-       </div>
-        <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('koifishimage')">
-          <img src="./images/imageicon.png" alt="imageicon" />
-          <p>Koi fish.jpg</p>
-        </div>
+      </div>
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('koifishimage')">
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>Koi fish.jpg</p>
+      </div>
     </div>
-  </div>
+
+    <!-- Status Bar -->
+   <div class="folder-status-bar">
+  <span class="status-left">7 object(s) (plus 14 hidden)</span>
+  <span class="status-right">My Computer</span>
 </div>
 
+
+
+  </div>
+</div>
+<!-------- images inside Drawings folder -------->
  <!-- 350zimage -->
 <div class="window hidden" id="350zimage" data-title="350z.jpg" data-icon="./images/imageicon.png">
   <div class="title-bar" onmousedown="startDrag(event, '350zimage')">
@@ -357,275 +372,263 @@
 
   <!-- Script ------------------------------------------------------------------------------------------------------------------------>
 <script>
-  let windowZIndex = 100;
+let windowZIndex = 100;
 
-  window.onload = function () {
-    openWindow('biographywindow');
-  };
+window.onload = function () {
+  openWindow('biographywindow');
+};
 
-  function openWindow(id) {
-    const win = document.getElementById(id);
-    win.classList.remove('hidden');
-    win.style.zIndex = ++windowZIndex;
+function openWindow(id) {
+  const win = document.getElementById(id);
+  win.classList.remove('hidden');
+  win.classList.remove('maximized');
+  win.style.zIndex = ++windowZIndex;
 
-    if (!win.classList.contains('maximized')) {
-      if (win.dataset.prevLeft && win.dataset.prevTop) {
-        win.style.left = win.dataset.prevLeft;
-        win.style.top = win.dataset.prevTop;
-      } else {
-        switch (id) {
-          case 'biographywindow':
-            win.style.left = '300px';
-            win.style.top = '100px';
-            win.style.width = '60%';
-            break;
-          case 'Images':
-            win.style.left = '300px';
-            win.style.top = '150px';
-            win.style.width = '40%';
-            win.style.height = '400px';
-            break;
-          case '350zimage':
-            win.style.left = '500px';
-            win.style.top = '200px';
-            break;
-          case 'hellcatimage':
-            win.style.left = '520px';
-            win.style.top = '220px';
-            break;
-          case '992image':
-            win.style.left = '540px';
-            win.style.top = '240px';
-            break;
-          case 'koifishimage':
-            win.style.left = '560px';
-            win.style.top = '260px';
-            break;
-            case 'drawingsfolder':
-            win.style.left = '560px';
-            win.style.top = '260px';
-            win.style.width = '40%';
-            win.style.height = '400px';
-            break;
-          default:
-            win.style.left = '150px';
-            win.style.top = '100px';
-        }
-      }
-
-      const body = win.querySelector('.window-body');
-      if (body) {
-        body.style.maxHeight = '';
-        body.style.overflowY = '';
-      }
-    }
-
-    const taskbar = document.querySelector('.taskbar-items');
-    if (!document.getElementById(`task-${id}`)) {
-      const btn = document.createElement('button');
-      btn.className = 'taskbar-button';
-      btn.id = `task-${id}`;
-
-// taskbar image of an opened window 
-
-    const title = win.dataset.title || id;
-const icon = win.dataset.icon || './images/folder-icon.png';
-btn.innerHTML = `<img src="${icon}" class="start-icon"> ${title}`;
-
-      btn.onclick = () => {
-        if (win.classList.contains('hidden')) {
-          win.classList.remove('hidden');
-          win.style.zIndex = ++windowZIndex;
-        } else {
-          win.classList.add('hidden');
-        }
-      };
-
-      taskbar.appendChild(btn);
+  // Restore previous position/size
+  if (win.dataset.prevLeft) win.style.left = win.dataset.prevLeft;
+  if (win.dataset.prevTop) win.style.top = win.dataset.prevTop;
+  if (win.dataset.prevWidth) win.style.width = win.dataset.prevWidth;
+  if (win.dataset.prevHeight) win.style.height = win.dataset.prevHeight;
+  else {
+    switch (id) {
+      case 'biographywindow':
+        win.style.left = '300px';
+        win.style.top = '100px';
+        win.style.width = '60%';
+        break;
+      case 'Images':
+        win.style.left = '300px';
+        win.style.top = '150px';
+        win.style.width = '40%';
+        win.style.height = '400px';
+        break;
+      case 'drawingsfolder':
+        win.style.left = '560px';
+        win.style.top = '260px';
+        win.style.width = '40%';
+        win.style.height = '400px';
+        break;
+      case '350zimage':
+        win.style.left = '500px';
+        win.style.top = '200px';
+        break;
+      case 'hellcatimage':
+        win.style.left = '520px';
+        win.style.top = '220px';
+        break;
+      case '992image':
+        win.style.left = '540px';
+        win.style.top = '240px';
+        break;
+      case 'koifishimage':
+        win.style.left = '560px';
+        win.style.top = '260px';
+        break;
+      default:
+        win.style.left = '150px';
+        win.style.top = '100px';
     }
   }
 
-  function closeWindow(id) {
-    const win = document.getElementById(id);
-    const wasMaximized = win.classList.contains('maximized');
+  const body = win.querySelector('.window-body');
+  if (body) {
+    body.style.maxHeight = '';
+    body.style.overflowY = '';
+  }
+
+  // Add to taskbar if not already there
+  const taskbar = document.querySelector('.taskbar-items');
+  if (!document.getElementById(`task-${id}`)) {
+    const btn = document.createElement('button');
+    btn.className = 'taskbar-button';
+    btn.id = `task-${id}`;
+    const title = win.dataset.title || id;
+    const icon = win.dataset.icon || './images/folder-icon.png';
+    btn.innerHTML = `<img src="${icon}" class="start-icon"> ${title}`;
+
+    btn.onclick = () => {
+      if (win.classList.contains('hidden')) {
+        win.classList.remove('hidden');
+        win.style.zIndex = ++windowZIndex;
+      } else {
+        win.classList.add('hidden');
+      }
+    };
+
+    taskbar.appendChild(btn);
+  }
+}
+
+function closeWindow(id) {
+  const win = document.getElementById(id);
+
+  if (!win.classList.contains('maximized')) {
+    win.dataset.prevWidth = win.style.width;
+    win.dataset.prevHeight = win.style.height;
+    win.dataset.prevLeft = win.style.left;
+    win.dataset.prevTop = win.style.top;
+  }
+
+  win.classList.remove('maximized');
+
+  win.style.width = '';
+  win.style.height = '';
+  win.style.left = '';
+  win.style.top = '';
+
+  const body = win.querySelector('.window-body');
+  if (body) {
+    body.scrollTop = 0;
+    body.style.maxHeight = '';
+    body.style.overflowY = '';
+  }
+
+  win.classList.add('hidden');
+
+  const taskButton = document.getElementById(`task-${id}`);
+  if (taskButton) taskButton.remove();
+
+  document.querySelectorAll('.folder.selected').forEach(folder => {
+    folder.classList.remove('selected');
+  });
+}
+
+function minimizeWindow(id) {
+  document.getElementById(id).classList.add('hidden');
+}
+
+function maximizeWindow(id) {
+  const win = document.getElementById(id);
+  const body = win.querySelector('.window-body');
+  const taskbarHeight = 40;
+  const titleBarHeight = 30;
+
+  if (win.classList.contains('maximized')) {
+    win.style.width = win.dataset.prevWidth || '50%';
+    win.style.height = win.dataset.prevHeight || '';
+    win.style.left = win.dataset.prevLeft || '150px';
+    win.style.top = win.dataset.prevTop || '100px';
     win.classList.remove('maximized');
-
-    if (wasMaximized) {
-      delete win.dataset.prevLeft;
-      delete win.dataset.prevTop;
-      delete win.dataset.prevWidth;
-      delete win.dataset.prevHeight;
-    }
-
-    win.style.width = '';
-    win.style.height = '';
-    win.style.left = '';
-    win.style.top = '';
-
-    const body = win.querySelector('.window-body');
     if (body) {
-      body.scrollTop = 0;
       body.style.maxHeight = '';
       body.style.overflowY = '';
     }
+  } else {
+    win.dataset.prevWidth = win.style.width;
+    win.dataset.prevHeight = win.style.height;
+    win.dataset.prevLeft = win.style.left;
+    win.dataset.prevTop = win.style.top;
 
-    win.classList.add('hidden');
-
-    const taskButton = document.getElementById(`task-${id}`);
-    if (taskButton) {
-      taskButton.remove();
+    win.style.width = '100vw';
+    win.style.height = `calc(100vh - ${taskbarHeight}px)`;
+    win.style.left = '0';
+    win.style.top = '0';
+    win.classList.add('maximized');
+    if (body) {
+      const availableHeight = window.innerHeight - taskbarHeight - titleBarHeight;
+      body.style.maxHeight = `${availableHeight}px`;
+      body.style.overflowY = 'auto';
     }
+  }
+}
 
-    // ✅ Deselect folders when a folder window is closed
+function openbiographywindow(event) {
+  event.stopPropagation();
+  openWindow('biographywindow');
+  document.getElementById('start-menu').classList.add('hidden');
+}
+
+function openImages(event) {
+  event.stopPropagation();
+  openWindow('Images');
+  document.getElementById('start-menu').classList.add('hidden');
+}
+
+function openFolder(folderId) {
+  openWindow(folderId);
+}
+
+function toggleMenu() {
+  document.getElementById('start-menu').classList.toggle('hidden');
+}
+
+// Clock
+function updateClock() {
+  const now = new Date();
+  const hours = now.getHours().toString().padStart(2, '0');
+  const minutes = now.getMinutes().toString().padStart(2, '0');
+  document.getElementById('clock').textContent = `${hours}:${minutes}`;
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+// Deselect folder on outside click
+document.addEventListener('click', function (e) {
+  const menu = document.getElementById('start-menu');
+  const button = document.querySelector('.start-button');
+  if (!menu.contains(e.target) && !button.contains(e.target)) {
+    menu.classList.add('hidden');
+  }
+
+  if (!e.target.closest('.folder')) {
     document.querySelectorAll('.folder.selected').forEach(folder => {
       folder.classList.remove('selected');
     });
   }
+});
 
-  function minimizeWindow(id) {
-    const win = document.getElementById(id);
-    win.classList.add('hidden');
-  }
-
-  function maximizeWindow(id) {
-    const win = document.getElementById(id);
-    const body = win.querySelector('.window-body');
-    const taskbarHeight = 40;
-    const titleBarHeight = 30;
-
-    if (win.classList.contains('maximized')) {
-      win.style.width = win.dataset.prevWidth || '50%';
-      win.style.height = win.dataset.prevHeight || '';
-      win.style.left = win.dataset.prevLeft || '150px';
-      win.style.top = win.dataset.prevTop || '100px';
-      win.classList.remove('maximized');
-
-      if (body) {
-        body.style.maxHeight = '';
-        body.style.overflowY = '';
-      }
-    } else {
-      win.dataset.prevWidth = win.style.width;
-      win.dataset.prevHeight = win.style.height;
-      win.dataset.prevLeft = win.style.left;
-      win.dataset.prevTop = win.style.top;
-
-      win.style.width = '100vw';
-      win.style.height = `calc(100vh - ${taskbarHeight}px)`;
-      win.style.left = '0';
-      win.style.top = '0';
-      win.classList.add('maximized');
-
-      if (body) {
-        const availableHeight = window.innerHeight - taskbarHeight - titleBarHeight;
-        body.style.maxHeight = `${availableHeight}px`;
-        body.style.overflowY = 'auto';
-      }
-    }
-  }
-
-  function openbiographywindow(event) {
-    event.stopPropagation();
-    openWindow('biographywindow');
-    document.getElementById('start-menu').classList.add('hidden');
-  }
-
-  function openImages(event) {
-    event.stopPropagation();
-    openWindow('Images');
-    document.getElementById('start-menu').classList.add('hidden');
-  }
-
-  function openFolder(folderId) {
-    openWindow(folderId);
-  }
-
-  function toggleMenu() {
-    const menu = document.getElementById('start-menu');
-    menu.classList.toggle('hidden');
-  }
-
-  // ✅ Deselect folder on empty-space click
-  document.addEventListener('click', function (e) {
-    const menu = document.getElementById('start-menu');
-    const button = document.querySelector('.start-button');
-
-    if (!menu.contains(e.target) && !button.contains(e.target)) {
-      menu.classList.add('hidden');
-    }
-
-    // Deselect folder if not clicking on a .folder
-    if (!e.target.closest('.folder')) {
-      document.querySelectorAll('.folder.selected').forEach(folder => {
-        folder.classList.remove('selected');
-      });
-    }
+function selectFolder(element) {
+  document.querySelectorAll('.folder').forEach(folder => {
+    folder.classList.remove('selected');
   });
+  element.classList.add('selected');
+}
 
-  // ✅ Select folder on click
-  function selectFolder(element) {
-    document.querySelectorAll('.folder').forEach(folder => {
-      folder.classList.remove('selected');
-    });
-    element.classList.add('selected');
-  }
+// Drag logic
+let dragData = null;
 
-  // Drag logic
-  let dragData = null;
+function startDrag(e, id) {
+  e.stopPropagation();
+  const element = document.getElementById(id);
+  if (element.classList.contains('maximized')) return;
 
-  function startDrag(e, id) {
-    e.stopPropagation();
-    const element = document.getElementById(id);
-    if (element.classList.contains('maximized')) return;
+  element.style.zIndex = ++windowZIndex;
 
-    element.style.zIndex = ++windowZIndex;
+  dragData = {
+    element,
+    offsetX: e.clientX - element.offsetLeft,
+    offsetY: e.clientY - element.offsetTop
+  };
 
-    dragData = {
-      element,
-      offsetX: e.clientX - element.offsetLeft,
-      offsetY: e.clientY - element.offsetTop
-    };
+  document.addEventListener('mousemove', drag);
+  document.addEventListener('mouseup', stopDrag);
+}
 
-    document.addEventListener('mousemove', drag);
-    document.addEventListener('mouseup', stopDrag);
-  }
+function drag(e) {
+  if (!dragData) return;
+  const { element, offsetX, offsetY } = dragData;
+  element.style.left = `${e.clientX - offsetX}px`;
+  element.style.top = `${e.clientY - offsetY}px`;
+  element.dataset.prevLeft = element.style.left;
+  element.dataset.prevTop = element.style.top;
+}
 
-  function drag(e) {
-    if (!dragData) return;
-    const { element, offsetX, offsetY } = dragData;
-    element.style.left = `${e.clientX - offsetX}px`;
-    element.style.top = `${e.clientY - offsetY}px`;
+function stopDrag() {
+  document.removeEventListener('mousemove', drag);
+  document.removeEventListener('mouseup', stopDrag);
+  dragData = null;
+}
 
-    element.dataset.moved = 'true';
-    element.dataset.prevLeft = element.style.left;
-    element.dataset.prevTop = element.style.top;
-  }
-
-  function stopDrag() {
-    document.removeEventListener('mousemove', drag);
-    document.removeEventListener('mouseup', stopDrag);
-    dragData = null;
-  }
-
-  function updateClock() {
-    const now = new Date();
-    const hours = now.getHours().toString().padStart(2, '0');
-    const minutes = now.getMinutes().toString().padStart(2, '0');
-    document.getElementById('clock').textContent = `${hours}:${minutes}`;
-  }
-
-  setInterval(updateClock, 1000);
-  updateClock();
-
-  // Bring window to front on click
-  window.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.window').forEach(win => {
-      win.addEventListener('mousedown', () => {
-        win.style.zIndex = ++windowZIndex;
-      });
+// Bring windows to front when clicked
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.window').forEach(win => {
+    win.addEventListener('mousedown', () => {
+      win.style.zIndex = ++windowZIndex;
     });
   });
+});
 </script>
+
 
 
 
