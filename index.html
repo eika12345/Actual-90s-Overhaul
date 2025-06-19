@@ -52,7 +52,7 @@
     <!-- Fashion E-commerce Website -->
 
       <div class="window-body-projects-title">
-        <h5> (1) Fashion E-commerce Website</h5>
+        <h5>Fashion E-commerce Website</h5>
       </div>
 
       <div class="window-body-projects">
@@ -69,7 +69,7 @@
     <!-- Portfolio Website -->
 
             <div class="window-body-projects-title">
-        <h5> (2) Portfolio Website</h5>
+        <h5>Portfolio Website (1)</h5>
       </div>
 
       <div class="window-body-projects">
@@ -88,7 +88,7 @@
     <!--Another Portfolio Website -->
 
             <div class="window-body-projects-title">
-        <h5> (3) Another Portfolio Website</h5>
+        <h5>Portfolio Website (2)</h5>
       </div>
       
       <div class="window-body-projects">
@@ -107,7 +107,7 @@
     <!-- biographywindow Content -->
 
             <div class="window-body-projects-title">
-        <h5> (4) FiveM Roleplay Community & Service Hub</h5>
+        <h5>FiveM Roleplay Community & Service Hub</h5>
       </div>
 
       <div class="window-body-projects">
@@ -122,7 +122,7 @@
             </div>
     </div>
   </div>
-<!-- images Window ------------------------------------------------------------------------------------------------------------------------>
+<!-- Images Window ------------------------------------------------------------------------------------------------------------------------>
   <!--blue top title bar-->
 <div class="window hidden folder-window" id="Images" data-icon="./images/camera.png">
   <div class="title-bar" onmousedown="startDrag(event, 'Images')">
@@ -168,11 +168,29 @@
   <p>Drawings</p>
 </div>
 
+<!-- ecommerce folder -->     
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('ecommercefolder')">
+  <img src="./images/fullfolder.png" alt="folder icon" />
+  <p>Fashion E-commerce Website</p>
+</div>
 
+<!-- portfolio 1 folder -->     
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('portfolio1folder')">
+  <img src="./images/fullfolder.png" alt="folder icon" />
+  <p>Portfolio Website (1)</p>
+</div>
 
+<!-- portfolio 2 folder -->     
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('portfolio2folder')">
+  <img src="./images/fullfolder.png" alt="folder icon" />
+  <p>Portfolio Website (2)</p>
+</div>
 
-
-
+<!-- nonamerp folder -->     
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('nonamerpfolder')">
+  <img src="./images/fullfolder.png" alt="folder icon" />
+  <p>FiveM Roleplay Community & Service Hub</p>
+</div>
 
       </div>
       </div>
@@ -183,9 +201,9 @@
     </div>
   </div>
 
-<!------------ Folder Windows (place these OUTSIDE any other windows) ------------>
+<!----------------------- Folder Windows (place these OUTSIDE any other windows) ----------------------->
 
- <!-- drawings folder -->
+ <!------------drawings folder  ------------>
  <div class="window hidden folder-window" id="drawingsfolder" data-title="Drawings" data-icon="./images/fullfolder.png">
   <div class="title-bar" onmousedown="startDrag(event, 'drawingsfolder')">
     <span class="title-text">
@@ -320,6 +338,141 @@
   </div>
 </div>
 
+
+<!-------- Ecommerce folder -------->
+ <div class="window hidden folder-window" id="ecommercefolder" data-title="Fashion E-commerce Website" data-icon="./images/fullfolder.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'ecommercefolder')">
+    <span class="title-text">
+      <img src="./images/fullfolder.png" alt="camera image" class="title-icon" />
+      Fashion E-commerce Website
+    </span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('ecommercefolder')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('ecommercefolder')"></button>
+      <button aria-label="Close" onclick="closeWindow('ecommercefolder')"></button>
+    </div>
+  </div>
+
+  <div class="window-body">
+    <!-- Toolbar -->
+    <div class="filetoolbar">
+      <span class="divider"></span>
+      <ul>
+        <li><span><u>F</u>ile</span></li>
+        <li><span><u>E</u>dit</span></li>
+        <li><span><u>V</u>iew</span></li>
+        <li><span><u>G</u>o</span></li>
+        <li><span><u>F</u>avourites</span></li>
+        <li><span><u>H</u>elp</span></li>
+      </ul>
+    </div>
+
+    <!-- Address Bar -->
+    <div class="field-row">
+      <span class="divider"></span>
+      <div class="address"><u>A</u>ddress</div>
+      <input type="text" value="C:\Images\Fashion E-commerce Website" style="width: 100%; font-weight: 900;" />
+    </div>
+
+    <!-- Folder Content Container -->
+    <div class="folder-container">
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('350zimage')">
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>E-commerce website image 1</p>
+      </div>
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('hellcatimage')">
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>E-commerce website image 2</p>
+      </div>
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('992image')">
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>E-commerce website image3</p>
+      </div>
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('koifishimage')">
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>E-commerce website image 4</p>
+      </div>
+    </div>
+
+    <!-- Status Bar -->
+   <div class="folder-status-bar">
+  <span class="status-left">7 object(s) (plus 14 hidden)</span>
+  <span class="status-right">My Computer</span>
+</div>
+
+
+
+  </div>
+</div>
+<!-------- images inside Drawings folder -------->
+<!-- E-commerce website image 1 -->
+<div class="window hidden" id="ecommerceimage1" data-title=" E-commerce website image 1" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'ecommerceimage1')">
+    <span class="title-text">
+  <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+  E-commerce website image 1
+</span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('ecommerceimage1')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('ecommerceimage1')"></button>
+      <button aria-label="Close" onclick="closeWindow('ecommerceimage1')"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <img src="./images/eikasden1.png" alt="Drawing 1" style="width: 100%" />
+  </div>
+</div>
+<!-- E-commerce website image 2 -->
+<div class="window hidden" id="ecommerceimage2" data-title="hellcat.jpg" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'hellcatimage')">
+    <span class="title-text">
+  <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+  hellcat.jpg
+</span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('hellcatimage')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('hellcatimage')"></button>
+      <button aria-label="Close" onclick="closeWindow('hellcatimage')"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <img src="./images/dodge.jpg" alt="Drawing 2" style="width: 100%" />
+  </div>
+</div>
+<!-- E-commerce website image 3 -->
+<div class="window hidden" id="ecommerceimage3" data-title="992.jpg" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, '992image')">
+    <span class="title-text">
+  <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+  992.jpg
+</span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('992image')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('992image')"></button>
+      <button aria-label="Close" onclick="closeWindow('992image')"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <img src="./images/porche.jpg" alt="Drawing 1" style="width: 100%" />
+  </div>
+</div>
+<!-- E-commerce website image 4 -->
+<div class="window hidden" id="ecommerceimage4" data-title="koi fish.jpg" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'koifishimage')">
+    <span class="title-text">
+  <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+  Koi fish.jpg
+</span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('koifishimage')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('koifishimage')"></button>
+      <button aria-label="Close" onclick="closeWindow('koifishimage')"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <img src="./images/koifish.jpg" alt="Drawing 1" style="width: 100%" />
+  </div>
+</div>
   <!-- Taskbar ---------------------------------------------------------------------------------------------------------------------------------------------->
   <div class="taskbar">
     <button class="start-button" onclick="toggleMenu()">
