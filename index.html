@@ -140,6 +140,7 @@
 <!-- File Toolbar -->
    <div class="window-body">
 <div class="filetoolbar">
+  
   <span class="divider"></span>
   <ul>
     <li><span accesskey="f"><u>F</u>ile</span></li>
@@ -160,7 +161,7 @@
 
 
 <!------------ main folder ------------>
-  <div class="window-body">
+ <!--<div class="window-body">-->
     <div class="folder-container">
  <!-- drawings folder -->     
       <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('drawingsfolder')">
@@ -187,15 +188,14 @@
 </div>
 
 <!-- nonamerp folder -->     
-      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('nonamerpfolder')">
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('fivemfolder')">
   <img src="./images/fullfolder.png" alt="folder icon" />
   <p>FiveM Roleplay Community & Service Hub</p>
 </div>
 
       </div>
-      </div>
       <div class="folder-status-bar">
-  <span class="status-left">7 object(s) (plus 14 hidden)</span>
+  <span class="status-left">5 object(s) </span>
   <span class="status-right">My Computer</span>
 </div>
     </div>
@@ -203,7 +203,7 @@
 
 <!----------------------- Folder Windows (place these OUTSIDE any other windows) ----------------------->
 
- <!------------drawings folder  ------------>
+ <!-----------------------drawings folder  ----------------------->
  <div class="window hidden folder-window" id="drawingsfolder" data-title="Drawings" data-icon="./images/fullfolder.png">
   <div class="title-bar" onmousedown="startDrag(event, 'drawingsfolder')">
     <span class="title-text">
@@ -260,7 +260,7 @@
 
     <!-- Status Bar -->
    <div class="folder-status-bar">
-  <span class="status-left">7 object(s) (plus 14 hidden)</span>
+  <span class="status-left">4 object(s)</span>
   <span class="status-right">My Computer</span>
 </div>
 
@@ -282,9 +282,9 @@
       <button aria-label="Close" onclick="closeWindow('350zimage')"></button>
     </div>
   </div>
-  <div class="window-body">
-    <img src="./images/350z.jpg" alt="Drawing 1" style="width: 100%" />
-  </div>
+  <div class="window-body image-style">
+  <img src="./images/350z.jpg" alt="Drawing 1" />
+</div>
 </div>
 <!-- hellcatimage -->
 <div class="window hidden" id="hellcatimage" data-title="hellcat.jpg" data-icon="./images/imageicon.png">
@@ -299,7 +299,7 @@
       <button aria-label="Close" onclick="closeWindow('hellcatimage')"></button>
     </div>
   </div>
-  <div class="window-body">
+  <div class="window-body image-style">
     <img src="./images/dodge.jpg" alt="Drawing 2" style="width: 100%" />
   </div>
 </div>
@@ -316,7 +316,7 @@
       <button aria-label="Close" onclick="closeWindow('992image')"></button>
     </div>
   </div>
-  <div class="window-body">
+  <div class="window-body image-style">
     <img src="./images/porche.jpg" alt="Drawing 1" style="width: 100%" />
   </div>
 </div>
@@ -333,13 +333,12 @@
       <button aria-label="Close" onclick="closeWindow('koifishimage')"></button>
     </div>
   </div>
-  <div class="window-body">
-    <img src="./images/koifish.jpg" alt="Drawing 1" style="width: 100%" />
-  </div>
+ <div class="window-body image-style">
+  <img src="./images/koifish.jpg" alt="Drawing 1" style="width: 100%; max-height: 80vh; object-fit: contain;" />  </div>
 </div>
 
 
-<!-------- Ecommerce folder -------->
+<!--------------------------- Ecommerce folder --------------------------->
  <div class="window hidden folder-window" id="ecommercefolder" data-title="Fashion E-commerce Website" data-icon="./images/fullfolder.png">
   <div class="title-bar" onmousedown="startDrag(event, 'ecommercefolder')">
     <span class="title-text">
@@ -376,27 +375,31 @@
 
     <!-- Folder Content Container -->
     <div class="folder-container">
-      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('350zimage')">
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('ecommerceimage1')">
         <img src="./images/imageicon.png" alt="imageicon" />
-        <p>E-commerce website image 1</p>
+        <p>E-commerce website image 1.jpg</p>
       </div>
-      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('hellcatimage')">
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('ecommerceimage2')">
         <img src="./images/imageicon.png" alt="imageicon" />
-        <p>E-commerce website image 2</p>
+        <p>E-commerce website image 2.jpg</p>
       </div>
-      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('992image')">
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('ecommerceimage3')">
         <img src="./images/imageicon.png" alt="imageicon" />
-        <p>E-commerce website image3</p>
+        <p>E-commerce website image 3.jpg</p>
       </div>
-      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('koifishimage')">
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('ecommerceimage4')">
         <img src="./images/imageicon.png" alt="imageicon" />
-        <p>E-commerce website image 4</p>
+        <p>E-commerce website image 4.jpg</p>
+      </div>
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('ecommerceimage5')">
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>E-commerce website image 5.jpg</p>
       </div>
     </div>
 
     <!-- Status Bar -->
    <div class="folder-status-bar">
-  <span class="status-left">7 object(s) (plus 14 hidden)</span>
+  <span class="status-left">5 object(s)</span>
   <span class="status-right">My Computer</span>
 </div>
 
@@ -404,13 +407,13 @@
 
   </div>
 </div>
-<!-------- images inside Drawings folder -------->
+<!-------- images inside ecommerce folder -------->
 <!-- E-commerce website image 1 -->
-<div class="window hidden" id="ecommerceimage1" data-title=" E-commerce website image 1" data-icon="./images/imageicon.png">
+<div class="window hidden" id="ecommerceimage1" data-title=" E-commerce website image 1.jpg" data-icon="./images/imageicon.png">
   <div class="title-bar" onmousedown="startDrag(event, 'ecommerceimage1')">
     <span class="title-text">
   <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
-  E-commerce website image 1
+  E-commerce website image 1.jpg
 </span>
     <div class="title-bar-controls">
       <button aria-label="Minimize" onclick="minimizeWindow('ecommerceimage1')"></button>
@@ -418,59 +421,469 @@
       <button aria-label="Close" onclick="closeWindow('ecommerceimage1')"></button>
     </div>
   </div>
-  <div class="window-body">
-    <img src="./images/eikasden1.png" alt="Drawing 1" style="width: 100%" />
-  </div>
+  <div class="window-body image-style">
+  <img src="./images/eikasden1.png" alt="ecommerce image 1" style="width: 100%; max-height: 80vh; object-fit: contain;" />
+</div>
 </div>
 <!-- E-commerce website image 2 -->
-<div class="window hidden" id="ecommerceimage2" data-title="hellcat.jpg" data-icon="./images/imageicon.png">
-  <div class="title-bar" onmousedown="startDrag(event, 'hellcatimage')">
+<div class="window hidden" id="ecommerceimage2" data-title="E-commerce website image 2.jpg" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'ecommerceimage2')">
     <span class="title-text">
   <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
-  hellcat.jpg
+  E-commerce website image 2.jpg
 </span>
     <div class="title-bar-controls">
-      <button aria-label="Minimize" onclick="minimizeWindow('hellcatimage')"></button>
-      <button aria-label="Maximize" onclick="maximizeWindow('hellcatimage')"></button>
-      <button aria-label="Close" onclick="closeWindow('hellcatimage')"></button>
+      <button aria-label="Minimize" onclick="minimizeWindow('ecommerceimage2')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('ecommerceimage2')"></button>
+      <button aria-label="Close" onclick="closeWindow('ecommerceimage2')"></button>
     </div>
   </div>
-  <div class="window-body">
-    <img src="./images/dodge.jpg" alt="Drawing 2" style="width: 100%" />
+  <div class="window-body image-style">
+    <img src="./images/eikasden2.png" alt="ecommerce image 2" style="width: 100%; max-height: 80vh; object-fit: contain;" />
   </div>
 </div>
 <!-- E-commerce website image 3 -->
-<div class="window hidden" id="ecommerceimage3" data-title="992.jpg" data-icon="./images/imageicon.png">
-  <div class="title-bar" onmousedown="startDrag(event, '992image')">
+<div class="window hidden" id="ecommerceimage3" data-title="E-commerce website image 3.jpg" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'ecommerceimage3')">
     <span class="title-text">
   <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
-  992.jpg
+  E-commerce website image 3.jpg
 </span>
     <div class="title-bar-controls">
-      <button aria-label="Minimize" onclick="minimizeWindow('992image')"></button>
-      <button aria-label="Maximize" onclick="maximizeWindow('992image')"></button>
-      <button aria-label="Close" onclick="closeWindow('992image')"></button>
+      <button aria-label="Minimize" onclick="minimizeWindow('ecommerceimage3')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('ecommerceimage3')"></button>
+      <button aria-label="Close" onclick="closeWindow('ecommerceimage3')"></button>
     </div>
   </div>
-  <div class="window-body">
-    <img src="./images/porche.jpg" alt="Drawing 1" style="width: 100%" />
+  <div class="window-body image-style">
+    <img src="./images/eikasden3.png" alt="ecommerce image 3" style="width: 100%; max-height: 80vh; object-fit: contain;" />
   </div>
 </div>
 <!-- E-commerce website image 4 -->
-<div class="window hidden" id="ecommerceimage4" data-title="koi fish.jpg" data-icon="./images/imageicon.png">
-  <div class="title-bar" onmousedown="startDrag(event, 'koifishimage')">
+<div class="window hidden" id="ecommerceimage4" data-title="E-commerce website image 4.jpg" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'ecommerceimage4')">
     <span class="title-text">
   <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
-  Koi fish.jpg
+  E-commerce website image 4.jpg
 </span>
     <div class="title-bar-controls">
-      <button aria-label="Minimize" onclick="minimizeWindow('koifishimage')"></button>
-      <button aria-label="Maximize" onclick="maximizeWindow('koifishimage')"></button>
-      <button aria-label="Close" onclick="closeWindow('koifishimage')"></button>
+      <button aria-label="Minimize" onclick="minimizeWindow('ecommerceimage4')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('ecommerceimage4')"></button>
+      <button aria-label="Close" onclick="closeWindow('ecommerceimage4')"></button>
     </div>
   </div>
+  <div class="window-body image-style">
+    <img src="./images/eikasden4.png" alt="ecommerce image 4" style="width: 100%; max-height: 80vh; object-fit: contain;" />
+  </div>
+</div>
+<!-- E-commerce website image 5 -->
+<div class="window hidden" id="ecommerceimage5" data-title="E-commerce website image 5.jpg" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'ecommerceimage5')">
+    <span class="title-text">
+  <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+  E-commerce website image 5.jpg
+</span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('ecommerceimage5')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('ecommerceimage5')"></button>
+      <button aria-label="Close" onclick="closeWindow('ecommerceimage5')"></button>
+    </div>
+  </div>
+  <div class="window-body image-style">
+    <img src="./images/eikasden5.png" alt="ecommerce image 5"style="width: 100%; max-height: 80vh; object-fit: contain;" />
+  </div>
+</div>
+
+
+<!--------------------------- Portfolio 1 folder --------------------------->
+
+ <div class="window hidden folder-window" id="portfolio1folder" data-title="Portfolio Website (1)" data-icon="./images/fullfolder.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'portfolio1folder')">
+    <span class="title-text">
+      <img src="./images/fullfolder.png" alt="camera image" class="title-icon" />
+      Portfolio Website (1)
+    </span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('portfolio1folder')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('portfolio1folder')"></button>
+      <button aria-label="Close" onclick="closeWindow('portfolio1folder')"></button>
+    </div>
+  </div>
+
   <div class="window-body">
-    <img src="./images/koifish.jpg" alt="Drawing 1" style="width: 100%" />
+    <!-- Toolbar -->
+    <div class="filetoolbar">
+      <span class="divider"></span>
+      <ul>
+        <li><span><u>F</u>ile</span></li>
+        <li><span><u>E</u>dit</span></li>
+        <li><span><u>V</u>iew</span></li>
+        <li><span><u>G</u>o</span></li>
+        <li><span><u>F</u>avourites</span></li>
+        <li><span><u>H</u>elp</span></li>
+      </ul>
+    </div>
+
+    <!-- Address Bar -->
+    <div class="field-row">
+      <span class="divider"></span>
+      <div class="address"><u>A</u>ddress</div>
+      <input type="text" value="C:\Images\Portfolio Website (1)" style="width: 100%; font-weight: 900;" />
+    </div>
+
+    <!-- Folder Content Container -->
+    <div class="folder-container">
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('portfolio1image1')">
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>Portfolio website (1) image 1.jpg</p>
+      </div>
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('portfolio1image2')">
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>Portfolio website (1) image 2.jpg</p>
+      </div>
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('portfolio1image3')">
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>Portfolio website (1) image 3.jpg</p>
+      </div>
+    </div>
+
+    <!-- Status Bar -->
+   <div class="folder-status-bar">
+  <span class="status-left">5 object(s)</span>
+  <span class="status-right">My Computer</span>
+</div>
+
+
+
+  </div>
+</div>
+
+<!-------- images inside portfolio 1 folder -------->
+<!-- portfolio 1 website image 1 -->
+<div class="window hidden" id="portfolio1image1" data-title="Portfolio website (1) image 1.jpg" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'portfolio1image1')">
+    <span class="title-text">
+  <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+  Portfolio website (1) image 1.jpg
+</span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('portfolio1image1')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('portfolio1image1')"></button>
+      <button aria-label="Close" onclick="closeWindow('portfolio1image1')"></button>
+    </div>
+  </div>
+  <div class="window-body image-style">
+  <img src="./images/erikasportfolio1.png" alt="Portfolio website (1) image 2" style="width: 100%; max-height: 80vh; object-fit: contain;" />
+</div>
+</div>
+<!-- portfolio 1 website image 2 -->
+<div class="window hidden" id="portfolio1image2" data-title="Portfolio website (1) image 2.jpg" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'portfolio1image2')">
+    <span class="title-text">
+  <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+  Portfolio website (1) image 2.jpg
+</span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('portfolio1image2')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('portfolio1image2')"></button>
+      <button aria-label="Close" onclick="closeWindow('portfolio1image2')"></button>
+    </div>
+  </div>
+  <div class="window-body image-style">
+    <img src="./images/erikasportfolio2.png" alt="Portfolio website (1) image 2" style="width: 100%; max-height: 80vh; object-fit: contain;" />
+  </div>
+</div>
+<!-- portfolio 1 website image 3 -->
+<div class="window hidden" id="portfolio1image3" data-title="Portfolio website (1) image 3.jpg" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'portfolio1image3')">
+    <span class="title-text">
+  <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+  Portfolio website (1) image 3.jpg
+</span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('portfolio1image3')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('portfolio1image3')"></button>
+      <button aria-label="Close" onclick="closeWindow('portfolio1image3')"></button>
+    </div>
+  </div>
+  <div class="window-body image-style">
+    <img src="./images/erikasportfolio3.png" alt="Portfolio website (1) image 3" style="width: 100%; max-height: 80vh; object-fit: contain;" />
+  </div>
+</div>
+
+
+<!--------------------------- Portfolio 2 folder --------------------------->
+
+<div class="window hidden folder-window" id="portfolio2folder" data-title="Portfolio Website (2)" data-icon="./images/fullfolder.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'portfolio2folder')">
+    <span class="title-text">
+      <img src="./images/fullfolder.png" alt="camera image" class="title-icon" />
+      Portfolio Website (2)
+    </span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('portfolio2folder')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('portfolio2folder')"></button>
+      <button aria-label="Close" onclick="closeWindow('portfolio2folder')"></button>
+    </div>
+  </div>
+
+  <div class="window-body">
+    <!-- Toolbar -->
+    <div class="filetoolbar">
+      <span class="divider"></span>
+      <ul>
+        <li><span><u>F</u>ile</span></li>
+        <li><span><u>E</u>dit</span></li>
+        <li><span><u>V</u>iew</span></li>
+        <li><span><u>G</u>o</span></li>
+        <li><span><u>F</u>avourites</span></li>
+        <li><span><u>H</u>elp</span></li>
+      </ul>
+    </div>
+
+    <!-- Address Bar -->
+    <div class="field-row">
+      <span class="divider"></span>
+      <div class="address"><u>A</u>ddress</div>
+      <input type="text" value="C:\Images\Portfolio Website (2)" style="width: 100%; font-weight: 900;" />
+    </div>
+
+    <!-- Folder Content Container -->
+    <div class="folder-container">
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('portfolio2image1')">
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>Portfolio Website (2) image 1.jpg</p>
+      </div>
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('portfolio2image2')">
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>Portfolio Website (2) image 2.jpg</p>
+      </div>
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('portfolio2image3')">
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>Portfolio Website (2) image 3.jpg</p>
+      </div>
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('portfolio2image4')">
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>Portfolio Website (2) image 4.jpg</p>
+      </div>
+    </div>
+
+    <!-- Status Bar -->
+   <div class="folder-status-bar">
+  <span class="status-left">5 object(s)</span>
+  <span class="status-right">My Computer</span>
+</div>
+
+
+
+  </div>
+</div>
+
+<!-------- images inside portfolio 2 folder -------->
+<!-- portfolio 2 website image 1 -->
+<div class="window hidden" id="portfolio2image1" data-title="Portfolio Website (2) image 1.jpg" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'portfolio2image1')">
+    <span class="title-text">
+  <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+  Portfolio Website (2) image 1.jpg
+</span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('portfolio2image1')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('portfolio2image1')"></button>
+      <button aria-label="Close" onclick="closeWindow('portfolio2image1')"></button>
+    </div>
+  </div>
+  <div class="window-body image-style">
+  <img src="./images/website1.png" alt="Portfolio Website (2) image 2" style="width: 100%; max-height: 80vh; object-fit: contain;" />
+</div>
+</div>
+<!-- portfolio 2 website image 2 -->
+<div class="window hidden" id="portfolio2image2" data-title="Portfolio Website (2) image 2.jpg" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'portfolio2image2')">
+    <span class="title-text">
+  <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+  Portfolio Website (2) image 2.jpg
+</span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('portfolio2image2')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('portfolio2image2')"></button>
+      <button aria-label="Close" onclick="closeWindow('portfolio2image2')"></button>
+    </div>
+  </div>
+  <div class="window-body image-style">
+    <img src="./images/website2.png" alt="Portfolio Website (2) image 2" style="width: 100%; max-height: 80vh; object-fit: contain;" />
+  </div>
+</div>
+<!-- portfolio 2 website image 3 -->
+<div class="window hidden" id="portfolio2image3" data-title="Portfolio Website (2) image 3.jpg" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'portfolio2image3')">
+    <span class="title-text">
+  <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+  Portfolio Website (2) image 3.jpg
+</span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('portfolio2image3')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('portfolio2image3')"></button>
+      <button aria-label="Close" onclick="closeWindow('portfolio2image3')"></button>
+    </div>
+  </div>
+  <div class="window-body image-style">
+    <img src="./images/website3.png" alt="Portfolio Website (2) image 3" style="width: 100%; max-height: 80vh; object-fit: contain;" />
+  </div>
+</div>
+<!-- portfolio 2 website image 4 -->
+<div class="window hidden" id="portfolio2image4" data-title="Portfolio Website (2) image 4.jpg" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'portfolio2image4')">
+    <span class="title-text">
+  <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+  Portfolio Website (2) image 3.jpg
+</span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('portfolio2image4')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('portfolio2image4')"></button>
+      <button aria-label="Close" onclick="closeWindow('portfolio2image4')"></button>
+    </div>
+  </div>
+  <div class="window-body image-style">
+    <img src="./images/website4.png" alt="Portfolio Website (2) image 4" style="width: 100%; max-height: 80vh; object-fit: contain;" />
+  </div>
+</div>
+
+<!---------------- FiveM Folder ---------------->
+ <div class="window hidden folder-window" id="fivemfolder" data-title="FiveM Roleplay Community & Service Hub" data-icon="./images/fullfolder.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'fivemfolder')">
+    <span class="title-text">
+      <img src="./images/fullfolder.png" alt="camera image" class="title-icon" />
+FiveM Roleplay Community & Service Hub
+    </span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('fivemfolder')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('fivemfolder')"></button>
+      <button aria-label="Close" onclick="closeWindow('fivemfolder')"></button>
+    </div>
+  </div>
+
+  <div class="window-body">
+    <!-- Toolbar -->
+    <div class="filetoolbar">
+      <span class="divider"></span>
+      <ul>
+        <li><span><u>F</u>ile</span></li>
+        <li><span><u>E</u>dit</span></li>
+        <li><span><u>V</u>iew</span></li>
+        <li><span><u>G</u>o</span></li>
+        <li><span><u>F</u>avourites</span></li>
+        <li><span><u>H</u>elp</span></li>
+      </ul>
+    </div>
+
+    <!-- Address Bar -->
+    <div class="field-row">
+      <span class="divider"></span>
+      <div class="address"><u>A</u>ddress</div>
+      <input type="text" value="C:\Images\FiveM Roleplay Community & Service Hub" style="width: 100%; font-weight: 900;" />
+    </div>
+
+    <!-- Folder Content Container -->
+    <div class="folder-container">
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('fivemimage1')">
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>E-commerce website image 1.jpg</p>
+      </div>
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('fivemimage2')">
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>E-commerce website image 2.jpg</p>
+      </div>
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('fivemimage3')">
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>E-commerce website image 3.jpg</p>
+      </div>
+      <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('fivemimage4')">
+        <img src="./images/imageicon.png" alt="imageicon" />
+        <p>E-commerce website image 4.jpg</p>
+      </div>
+    </div>
+
+    <!-- Status Bar -->
+   <div class="folder-status-bar">
+  <span class="status-left">5 object(s)</span>
+  <span class="status-right">My Computer</span>
+</div>
+
+
+
+  </div>
+</div>
+<!-------- images inside fivem folder -------->
+<!-- E-commerce website image 1 -->
+<div class="window hidden" id="fivemimage1" data-title=" FiveM roleplay hub image 1.jpg" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'fivemimage1')">
+    <span class="title-text">
+  <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+  FiveM roleplay hub image 1.jpg
+</span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('fivemimage1')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('fivemimage1')"></button>
+      <button aria-label="Close" onclick="closeWindow('fivemimage1')"></button>
+    </div>
+  </div>
+  <div class="window-body image-style">
+  <img src="./images/nonamerppage1.png" alt="FiveM Image 1" style="width: 100%; max-height: 80vh; object-fit: contain;" />
+</div>
+</div>
+<!-- E-commerce website image 2 -->
+<div class="window hidden" id="fivemimage2" data-title="FiveM roleplay hub image 2.jpg" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'fivemimage2')">
+    <span class="title-text">
+  <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+    FiveM roleplay hub image 2.jpg
+
+</span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('fivemimage2')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('fivemimage2')"></button>
+      <button aria-label="Close" onclick="closeWindow('fivemimage2')"></button>
+    </div>
+  </div>
+  <div class="window-body image-style">
+    <img src="./images/nonamerppage2.png" alt="FiveM Image 2" style="width: 100%; max-height: 80vh; object-fit: contain;" />
+  </div>
+</div>
+<!-- E-commerce website image 3 -->
+<div class="window hidden" id="fivemimage3" data-title="FiveM roleplay hub image 3.jpg" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'fivemimage3')">
+    <span class="title-text">
+  <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+    FiveM roleplay hub image 3.jpg
+
+</span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('fivemimage3')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('fivemimage3')"></button>
+      <button aria-label="Close" onclick="closeWindow('fivemimage3')"></button>
+    </div>
+  </div>
+  <div class="window-body image-style">
+    <img src="./images/nonamerppage3.png" alt="FiveM Image 3" style="width: 100%; max-height: 80vh; object-fit: contain;" />
+  </div>
+</div>
+<!-- E-commerce website image 4 -->
+<div class="window hidden" id="fivemimage4" data-title="FiveM roleplay hub image 4.jpg" data-icon="./images/imageicon.png">
+  <div class="title-bar" onmousedown="startDrag(event, 'fivemimage4')">
+    <span class="title-text">
+  <img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+    FiveM roleplay hub image 4.jpg
+
+</span>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="minimizeWindow('fivemimage4')"></button>
+      <button aria-label="Maximize" onclick="maximizeWindow('fivemimage4')"></button>
+      <button aria-label="Close" onclick="closeWindow('fivemimage4')"></button>
+    </div>
+  </div>
+  <div class="window-body image-style">
+    <img src="./images/nonamerppage4.png" alt="FiveM Image 4" style="width: 100%; max-height: 80vh; object-fit: contain;" />
   </div>
 </div>
   <!-- Taskbar ---------------------------------------------------------------------------------------------------------------------------------------------->
@@ -555,6 +968,7 @@ function openWindow(id) {
         win.style.width = '40%';
         win.style.height = '400px';
         break;
+        // drawings
       case 'drawingsfolder':
         win.style.left = '560px';
         win.style.top = '260px';
@@ -576,6 +990,114 @@ function openWindow(id) {
       case 'koifishimage':
         win.style.left = '560px';
         win.style.top = '260px';
+        break;
+        // ecoommerce
+        case 'ecommercefolder':
+        win.style.left = '560px';
+        win.style.top = '260px';
+        win.style.width = '40%';
+        win.style.height = '400px';
+        break;
+        case 'ecommerceimage1':
+        win.style.left = '300px';
+        win.style.top = '100px';
+        win.style.width = '60%';
+        break;
+        case 'ecommerceimage2':
+        win.style.left = '300px';
+        win.style.top = '100px';
+        win.style.width = '60%';
+        break;
+        case 'ecommerceimage3':
+        win.style.left = '300px';
+        win.style.top = '100px';
+        win.style.width = '60%';
+        break;
+        case 'ecommerceimage4':
+        win.style.left = '300px';
+        win.style.top = '100px';
+        win.style.width = '60%';
+        break;
+        case 'ecommerceimage5':
+        win.style.left = '300px';
+        win.style.top = '100px';
+        win.style.width = '60%';
+        break;
+        // portfolio 1
+        case 'portfolio1folder':
+        win.style.left = '560px';
+        win.style.top = '260px';
+        win.style.width = '40%';
+        win.style.height = '400px';
+        break;
+         case 'portfolio1image1':
+        win.style.left = '300px';
+        win.style.top = '100px';
+        win.style.width = '60%';
+        break;
+        case 'portfolio1image2':
+        win.style.left = '300px';
+        win.style.top = '100px';
+        win.style.width = '60%';
+        break;
+        case 'portfolio1image3':
+        win.style.left = '300px';
+        win.style.top = '100px';
+        win.style.width = '60%';
+        break;
+        // portfolio 2
+        case 'portfolio2folder':
+        win.style.left = '560px';
+        win.style.top = '260px';
+        win.style.width = '40%';
+        win.style.height = '400px';
+        break;
+         case 'portfolio2image1':
+        win.style.left = '300px';
+        win.style.top = '100px';
+        win.style.width = '60%';
+        break;
+        case 'portfolio2image2':
+        win.style.left = '300px';
+        win.style.top = '100px';
+        win.style.width = '60%';
+        break;
+        case 'portfolio2image3':
+        win.style.left = '300px';
+        win.style.top = '100px';
+        win.style.width = '60%';
+        break;
+         case 'portfolio2image4':
+        win.style.left = '300px';
+        win.style.top = '100px';
+        win.style.width = '60%';
+        break;
+        // fivem 
+        case 'fivemfolder':
+        win.style.left = '560px';
+        win.style.top = '260px';
+        win.style.width = '40%';
+        win.style.height = '400px';
+        break;
+         case 'fivemimage1':
+        win.style.left = '300px';
+        win.style.top = '100px';
+        win.style.width = '60%';
+        break;
+        case 'fivemimage2':
+        win.style.left = '300px';
+        win.style.top = '100px';
+        win.style.width = '60%';
+        break;
+        case 'fivemimage3':
+        win.style.left = '300px';
+        win.style.top = '100px';
+        win.style.width = '60%';
+        break;
+         case 'fivemimage4':
+        win.style.left = '300px';
+        win.style.top = '100px';
+        win.style.width = '60%';
         break;
       default:
         win.style.left = '150px';
