@@ -54,10 +54,13 @@
     <!-- biographywindow Content -->
     <div class="window-body">
      <div style="display: flex; justify-content: center;margin-top: 4em;">
-  <img src="./images/erikas.jpg" alt="erikas image" style="width: 70%;border-top: 2px solid #fff;
+  <img src="./images/erikas.jpg" alt="erikas image" style="width: 70%;border-top: 2px solid #fff; 
       border-bottom: 2px solid #808080;
       border-left: 2px solid #fff;
-      border-right: 2px solid #808080;">
+      border-right: 2px solid #808080;"
+      loading="lazy"
+      
+      >
 </div>
 
       <div class="window-body-section-title">
@@ -976,9 +979,9 @@ FiveM Roleplay Community & Service Hub
 <script>
 let windowZIndex = 100;
 
-window.onload = function () {
+window.addEventListener('DOMContentLoaded', () => {
   openWindow('biographywindow');
-};
+});
 
 function openWindow(id) {
   const win = document.getElementById(id);
