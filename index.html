@@ -10,6 +10,30 @@
 </head>
 
 <body>
+  <!-- desktop shortcuts ------------------------------------------------------------------------------------------------------------------------>
+<div class="desktop-shortcuts">
+
+  <div class="shortcut" onclick="selectShortcut(this)" ondblclick="openWindow('biographywindow')">
+    <img src="./images/computer.png" alt="Biography icon">
+    <p>Biography</p>
+  </div>
+
+  <div class="shortcut" onclick="selectShortcut(this)" ondblclick="openWindow('Images')">
+    <img src="./images/camera.png" alt="Images icon">
+    <p>Images</p>
+  </div>
+
+  <div class="shortcut" onclick="selectShortcut(this)" ondblclick="window.open('https://eikasden.com/', '_blank')">
+  <img src="./images/e.d.png" alt="eikas den icon">
+  <p>Eika's Den</p>
+</div>
+
+  <div class="shortcut" onclick="selectShortcut(this)" ondblclick="window.open('https://www.erikaspetrauskas.com/', '_blank')">
+  <img src="./images/erikaspetrauskas.png" alt="Erikas icon">
+  <p>Erikas Petrauskas Portfolio</p>
+</div>
+</div>
+
   <!-- biographywindow Window ------------------------------------------------------------------------------------------------------------------------>
   <div class="window hidden" id="biographywindow" data-title="Biography" data-icon="./images/computer.png">
     <div class="title-bar" onmousedown="startDrag(event, 'biographywindow')">
@@ -25,6 +49,12 @@
     </div>
     <!-- biographywindow Content -->
     <div class="window-body">
+     <div style="display: flex; justify-content: center;margin-top: 4em;">
+  <img src="./images/erikas.jpg" alt="erikas image" style="width: 70%;border-top: 2px solid #fff;
+      border-bottom: 2px solid #808080;
+      border-left: 2px solid #fff;
+      border-right: 2px solid #808080;">
+</div>
 
       <div class="window-body-section-title">
         <h4>Erikas Petrauskas</h4>
@@ -92,8 +122,9 @@
       </div>
       
       <div class="window-body-projects">
-        <p><a href="https://www.erikaspetrauskas.com/" target="_blank">
-          Images</p></a>
+       <p style="cursor: pointer; color: blue; text-decoration: underline;" onclick="openWindow('portfolio2folder')">
+        Images
+      </p>
             </div>
              <div class="window-body-projects-image">
               <img src="./images/website1.png" alt="another portfolio image">
@@ -104,15 +135,16 @@
               </p>
             </div>
 
-    <!-- biographywindow Content -->
+    <!-- fivem website -->
 
             <div class="window-body-projects-title">
         <h5>FiveM Roleplay Community & Service Hub</h5>
       </div>
 
       <div class="window-body-projects">
-        <p><a href="https://www.erikaspetrauskas.com/" target="_blank">
-         Images</p></a>
+        <p style="cursor: pointer; color: blue; text-decoration: underline;" onclick="openWindow('fivemfolder')">
+        Images
+        </p>
             </div>
              <div class="window-body-projects-image">
               <img src="./images/nonamerppage1.png" alt="no name rp image">
@@ -1167,7 +1199,11 @@ function closeWindow(id) {
     folder.classList.remove('selected');
   });
 }
-
+// shortcut selected blue background
+function selectShortcut(element) {
+  document.querySelectorAll('.shortcut').forEach(s => s.classList.remove('selected'));
+  element.classList.add('selected');
+}
 function minimizeWindow(id) {
   document.getElementById(id).classList.add('hidden');
 }
@@ -1245,11 +1281,13 @@ document.addEventListener('click', function (e) {
     menu.classList.add('hidden');
   }
 
-  if (!e.target.closest('.folder')) {
-    document.querySelectorAll('.folder.selected').forEach(folder => {
-      folder.classList.remove('selected');
-    });
-  }
+  setTimeout(() => {
+    if (!e.target.closest('.folder') && !e.target.closest('.shortcut')) {
+      document.querySelectorAll('.folder.selected, .shortcut.selected').forEach(el => {
+        el.classList.remove('selected');
+      });
+    }
+  }, 0);
 });
 
 function selectFolder(element) {

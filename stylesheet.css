@@ -25,6 +25,61 @@ body {
 .hidden {
   display: none;
 }
+/*-----------------desktop shortcuts----------------------*/
+.desktop-shortcuts {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1;
+  margin-top: 10px;
+}
+
+.shortcut {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  text-align: center;
+  cursor: default;
+  border: 1px solid transparent;
+}
+
+.shortcut img {
+  width: 40px;
+  height: 40px;
+  padding: 3px;
+}
+
+.shortcut p {
+  margin: 5px 0 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-family: WindowsRegular;
+  font-size: 14px;
+  color: white;
+}
+.shortcut.selected p {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+}
+.shortcut.selected {
+  background-color: #000080;
+  color: white;
+  border: 1px dotted white;
+}
+.shortcut:hover,
+.shortcut.selected {
+  background-color: #000080;
+  color: white;
+  border: 1px dotted white;
+}
 /*text in window title*/
 .title-text {
   display: flex;
@@ -265,6 +320,7 @@ body {
   color: white;
   border: 1px dotted white;
 }
+
 
 .folder-status-bar {
   display: flex;
