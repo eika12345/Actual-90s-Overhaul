@@ -69,11 +69,6 @@ body {
   overflow: visible;
   text-overflow: unset;
 }
-.shortcut.selected {
-  background-color: #000080;
-  color: white;
-  border: 1px dotted white;
-}
 .shortcut:hover,
 .shortcut.selected {
   background-color: #000080;
