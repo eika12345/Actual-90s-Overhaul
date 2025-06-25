@@ -22,15 +22,8 @@ body {
   overflow: hidden;
   margin: 0;
 }
-@media (max-width: 768px) {
-  body {
-    background-image: url('./images/windows98backgroundmobile.jpeg');
-    position: fixed;
-    width: 100%;
-    overflow: hidden;
-    touch-action: none; 
-  }
-}
+
+
 .hidden {
   display: none;
 }
@@ -514,3 +507,46 @@ body {
       font-size: 12px;
       font-family: WindowsRegular;
     }
+
+@media (max-width: 768px) {
+  body {
+    background-image: url('./images/windows98backgroundmobile.jpeg');
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    touch-action: none; 
+  }
+   #biographywindow {
+    width: 90vw !important;
+  }
+
+  #biographywindow .window-body {
+    max-height: calc(100vh - 70px); /* adjust as needed for title/taskbar */
+    overflow-y: auto;
+  }
+  
+
+
+  #biographywindow:not(.maximized) {
+    width: 100vw !important;
+  }
+
+  #biographywindow:not(.maximized) .window-body {
+    padding: 0 !important;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+
+  #biographywindow:not(.maximized) .window-body-section,
+  #biographywindow:not(.maximized) .window-body-section-title,
+  #biographywindow:not(.maximized) .window-body-section-country,
+  #biographywindow:not(.maximized) .window-body-projects,
+  #biographywindow:not(.maximized) .window-body-projects-title {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+
+  #biographywindow:not(.maximized) .window-body-projects-image {
+    max-width: 90% !important;
+  }
+}
