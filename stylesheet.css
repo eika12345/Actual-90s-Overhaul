@@ -22,6 +22,14 @@ body {
   overflow: hidden;
   margin: 0;
 }
+@media (max-width: 768px) {
+  body {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    touch-action: none; /* prevent gestures */
+  }
+}
 .hidden {
   display: none;
 }
