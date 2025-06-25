@@ -24,10 +24,11 @@ body {
 }
 @media (max-width: 768px) {
   body {
+    background-image: url('./images/windows98backgroundmobile.jpeg');
     position: fixed;
     width: 100%;
     overflow: hidden;
-    touch-action: none; /* prevent gestures */
+    touch-action: none; 
   }
 }
 .hidden {
