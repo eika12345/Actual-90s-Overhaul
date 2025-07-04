@@ -1024,7 +1024,7 @@ if (win.dataset.prevHeight) {
     // Mobile default: centered and responsive
     const winWidth = 0.9 * window.innerWidth; // 90vw
     const winLeft = 0.05 * window.innerWidth; // 5vw
-    const winTop = 0.1 * window.innerHeight; // 10vh
+    const winTop = 0.085 * window.innerHeight; // 10vh
 
     win.style.width = `${winWidth}px`;
     win.style.left = `${winLeft}px`;
@@ -1373,6 +1373,7 @@ function applyMobileFolderStyles() {
   const isMobile = window.innerWidth <= 768;
 
   const folderIds = [
+    'biographywindow',
     'drawingsfolder',
     'ecommercefolder',
     'portfolio1folder',
@@ -1410,16 +1411,23 @@ function applyMobileFolderStyles() {
     'koifishimage'
   ];
 
-  folderIds.forEach(id => {
+  responsiveIds.forEach(id => {
     const win = document.getElementById(id);
     if (!win) return;
 
     if (isMobile) {
       win.style.width = '90vw';
-      win.style.height = '400px';
       win.style.left = '5vw';
       win.style.top = '10vh';
+
+      // 🎯 Custom mobile height for biography window:
+      if (id === 'biographywindow') {
+        win.style.height = '85vh';
+      } else {
+        win.style.height = '70vh';
+      }
     } else {
+      // Reset styles on desktop
       win.style.width = '';
       win.style.height = '';
       win.style.left = '';
