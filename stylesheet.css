@@ -529,6 +529,10 @@ body {
    #biographywindow {
     width: 90vw !important;
   }
+  #Images, #drawingsfolder /*#350zimage*/ {
+    width: 75vw !important;
+  }
+  
 
   /*#biographywindow .window-body {
     max-height: calc(100vh - 70px); 

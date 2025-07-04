@@ -1184,6 +1184,7 @@ function openWindow(id) {
 
     taskbar.appendChild(btn);
   }
+  applyMobileFolderStyles();
 }
 
 function closeWindow(id) {
@@ -1346,6 +1347,67 @@ document.addEventListener('click', function (e) {
     }
   }, 0);
 });
+
+function applyMobileFolderStyles() {
+  const isMobile = window.innerWidth <= 768;
+
+  const folderIds = [
+    'drawingsfolder',
+    'ecommercefolder',
+    'portfolio1folder',
+    'portfolio2folder',
+    'fivemfolder',
+
+    // Ecommerce images
+    'ecommerceimage1',
+    'ecommerceimage2',
+    'ecommerceimage3',
+    'ecommerceimage4',
+    'ecommerceimage5',
+
+    // Portfolio 1 images
+    'portfolio1image1',
+    'portfolio1image2',
+    'portfolio1image3',
+
+    // Portfolio 2 images
+    'portfolio2image1',
+    'portfolio2image2',
+    'portfolio2image3',
+    'portfolio2image4',
+
+    // Fivem images
+    'fivemimage1',
+    'fivemimage2',
+    'fivemimage3',
+    'fivemimage4',
+
+    // Drawings
+    '350zimage',
+    'hellcatimage',
+    '992image',
+    'koifishimage'
+  ];
+
+  folderIds.forEach(id => {
+    const win = document.getElementById(id);
+    if (!win) return;
+
+    if (isMobile) {
+      win.style.width = '90vw';
+      win.style.height = '400px';
+      win.style.left = '5vw';
+      win.style.top = '10vh';
+    } else {
+      win.style.width = '';
+      win.style.height = '';
+      win.style.left = '';
+      win.style.top = '';
+    }
+  });
+}
+window.addEventListener('resize', applyMobileFolderStyles);
+window.addEventListener('DOMContentLoaded', applyMobileFolderStyles);
 </script>
 
 
