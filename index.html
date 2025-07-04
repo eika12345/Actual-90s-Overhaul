@@ -1006,11 +1006,31 @@ function openWindow(id) {
   win.style.zIndex = Math.min(++windowZIndex, 998); // Keep below taskbar
 
   // Restore position or default
-  if (win.dataset.prevLeft) win.style.left = win.dataset.prevLeft;
-  if (win.dataset.prevTop) win.style.top = win.dataset.prevTop;
-  if (win.dataset.prevWidth) win.style.width = win.dataset.prevWidth;
-  if (win.dataset.prevHeight) win.style.height = win.dataset.prevHeight;
-  else {
+  if (win.dataset.prevLeft) {
+  win.style.left = win.dataset.prevLeft;
+}
+if (win.dataset.prevTop) {
+  win.style.top = win.dataset.prevTop;
+}
+if (win.dataset.prevWidth) {
+  win.style.width = win.dataset.prevWidth;
+}
+if (win.dataset.prevHeight) {
+  win.style.height = win.dataset.prevHeight;
+} else {
+  const isMobile = window.innerWidth <= 768;
+
+  if (isMobile) {
+    // Mobile default: centered and responsive
+    const winWidth = 0.9 * window.innerWidth; // 90vw
+    const winLeft = 0.05 * window.innerWidth; // 5vw
+    const winTop = 0.1 * window.innerHeight; // 10vh
+
+    win.style.width = `${winWidth}px`;
+    win.style.left = `${winLeft}px`;
+    win.style.top = `${winTop}px`;
+    win.style.height = 'auto';
+  } else {
     switch (id) {
       case 'biographywindow':
         win.style.left = '150px';
@@ -1163,6 +1183,7 @@ function openWindow(id) {
         win.style.top = '100px';
     }
   }
+}
 
   const taskbar = document.querySelector('.taskbar-items');
   if (!document.getElementById(`task-${id}`)) {
