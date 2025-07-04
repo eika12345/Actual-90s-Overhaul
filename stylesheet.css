@@ -95,19 +95,22 @@ body {
   overflow-y: auto; /* Enables vertical scrollbar */
   overflow-x: hidden; /* Optional: hides horizontal scrollbar */
 }
+.biography-container {
+  margin-left: 12em;
+  margin-right: 12em;
+  /*background-color: #0f63fe73;*/
+}
 .window-body-section {
-    margin: 3em 5em 3em;
+    margin: 3em 0em;
 }
 .window-body-section p, h5 {
     font-size: 16px
 }
 .window-body-section-title {
-    margin: 5em 5em 1em 5em;
+    margin: 5em 0em 1em;
 }
 
 .window-body-section-country {
-  margin-left: 5em;
-  margin-right: 5em;
   display: flex;
   align-items: center; 
   gap: 0.3em; 
@@ -120,22 +123,21 @@ body {
     width: 16px;
 }
 .window-body-projects-title {
-  margin: 3em 5em 1em;
+  margin: 3em 0em 1em;
 }
 .window-body-projects {
-  margin: 1em 5em 3em;
+  margin: 1em 0em 3em;
 }
 .window-body-projects p {
   font-size: 16px;
+  word-wrap: break-word; /* Allows long words to break and wrap onto the next line */
 }
 .window-body-projects-image {
   justify-content: center;
   display: flex;
   flex-direction: column;
-
   gap: 1em; 
-  max-width: 75%;
-    margin: 2em auto;
+  max-width: 100%;
 }
 .window-body-projects-image p {
   font-size: 16px;
@@ -161,10 +163,7 @@ body {
 
 }
 
-.window.maximized .title-bar {
-  height: 30px;
-  font-size: 14px;
-}
+
 .skills {
       display: flex;
       flex-wrap: wrap;
@@ -507,7 +506,13 @@ body {
       font-size: 12px;
       font-family: WindowsRegular;
     }
-
+@media (max-width: 1280px) {
+.biography-container {
+  margin-left: 5em;
+  margin-right: 5em;
+  /*background-color: #0f63fe73;*/
+}
+}
 @media (max-width: 768px) {
   body {
     background-image: url('./images/windows98backgroundmobile.jpeg');
@@ -525,15 +530,16 @@ body {
     overflow-y: auto;
   }
   
+  
 
 
   #biographywindow:not(.maximized) {
-    width: 100vw !important;
+    width: 90vw !important;
   }
 
   #biographywindow:not(.maximized) .window-body {
     padding: 0 !important;
-    max-height: calc(100vh - 70px);
+    max-height: calc(100vh - 200px) !important; /* adjust as needed for title/taskbar */
     overflow-y: auto;
   }
 
