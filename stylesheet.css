@@ -521,12 +521,17 @@ body {
     overflow: hidden;
     touch-action: none; 
   }
+  .biography-container {
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  /*background-color: #0f63fe73;*/
+}
    #biographywindow {
     width: 90vw !important;
   }
 
-  #biographywindow .window-body {
-    max-height: calc(100vh - 70px); /* adjust as needed for title/taskbar */
+  /*#biographywindow .window-body {
+    max-height: calc(100vh - 70px); 
     overflow-y: auto;
   }
   
@@ -539,7 +544,7 @@ body {
 
   #biographywindow:not(.maximized) .window-body {
     padding: 0 !important;
-    max-height: calc(100vh - 200px) !important; /* adjust as needed for title/taskbar */
+    max-height: calc(100vh - 200px) !important; 
     overflow-y: auto;
   }
 
@@ -554,5 +559,5 @@ body {
 
   #biographywindow:not(.maximized) .window-body-projects-image {
     max-width: 90% !important;
-  }
+  }*/
 }
