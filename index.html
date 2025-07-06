@@ -1011,21 +1011,18 @@ if (win.dataset.prevTop) win.style.top = win.dataset.prevTop;
 if (win.dataset.prevWidth) win.style.width = win.dataset.prevWidth;
 if (win.dataset.prevHeight) win.style.height = win.dataset.prevHeight;
 else {
+  const isMobile = window.innerWidth < 768;
 switch (id) {
 case 'biographywindow':
-win.style.left = '150px';
-win.style.top = '100px';
-win.style.width = '60%';
-break;
-win.style.left = '300px';
-win.style.top = '100px';
-win.style.width = '60%';
-break;
+  win.style.left = isMobile ? '20px' : '150px';
+  win.style.top = isMobile ? '60px' : '100px';
+  win.style.width = isMobile ? '95%' : '60%';
+  break;
 case 'Images':
-win.style.left = '300px';
-win.style.top = '150px';
-win.style.width = '40%';
-win.style.height = '400px';
+win.style.left = isMobile ? '25px' : '300px';
+win.style.top = isMobile ? '150px' : '150px';
+win.style.width = isMobile ? '70%' : '40%';
+win.style.height = isMobile ? '400px' : '400px';
 break;
 // drawings
 case 'drawingsfolder':
