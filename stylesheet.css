@@ -569,7 +569,13 @@ width: 90vw ;
     padding: 2px; /* optional: reduce padding for more image space */
   }
 
-  
+  .folder-container {
+  align-content: flex-start !important;
+  justify-content: flex-start !important;
+}
+.folder {
+  margin: 5px !important;
+}
 
 }
   
