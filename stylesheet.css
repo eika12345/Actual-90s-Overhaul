@@ -515,8 +515,6 @@ scrollbar-width: none;
 
 .taskbar-items {
 background-color: silver;
-border: 2px outset #fff;
-padding: 2px 8px;
 font-size: 15px;
 white-space: nowrap;
 }
