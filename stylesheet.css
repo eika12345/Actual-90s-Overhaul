@@ -7,11 +7,16 @@ margin: 0;
 padding: 0;
 box-sizing: border-box; 
 }
+
 html, body {
 height: 100%;
+width: 100%;
 overflow: hidden;
 font-family: 'Segoe UI', sans-serif;
+margin: 0;
+padding: 0;
 }
+
 body {
 background-color: #008080;
 background-image: url('./images/windows98background.jpg');
@@ -156,8 +161,10 @@ border-bottom: 2px solid #808080;
 border-left: 2px solid #fff;
 border-right: 2px solid #808080;
 box-shadow: none;
-/* Remove margin/padding if needed */
 padding: 0;
+width: 100% !important;
+left: 0 !important;
+box-sizing: border-box;
 }
 
 .window.maximized .window-body {
@@ -521,6 +528,8 @@ padding: 2px 8px;
 font-size: 12px;
 font-family: WindowsRegular;
 }
+/*-------------------------- max-width: 1280px --------------------------*/
+
 @media (max-width: 1280px) {
 .biography-container {
 margin-left: 5em;
@@ -528,6 +537,8 @@ margin-right: 5em;
 /*background-color: #0f63fe73;*/
 }
 }
+/*-------------------------- max-width: 768px --------------------------*/
+
 @media (max-width: 768px) {
 body {
 background-image: url('./images/windows98backgroundmobile.jpeg');
@@ -536,17 +547,19 @@ width: 100%;
 overflow: hidden;
 touch-action: none; 
 }
+
+
   .biography-container {
   margin-left: 1.5em;
   margin-right: 1.5em;
   
 }
-/*-------------width of the windows when on smaller device -------------*/
+/*--------width of the windows when on smaller device --------*/
 #biographywindow {
-width: 90vw !important;
+width: 90vw ;
 }
 #Images {
-  width: 80vw !important;
+  width: 80vw ;
 }
 
   #biographywindow .window-body {
@@ -559,31 +572,6 @@ width: 90vw !important;
   }
 
   
-
-/*
- #biographywindow:not(.maximized) {
-   width: 90vw !important;
- }
-
- #biographywindow:not(.maximized) .window-body {
-   padding: 0 !important;
-    max-height: calc(100vh - 200px) !important; 
-    max-height: calc(100vh - 200px) !important; 
-   overflow-y: auto;
- }
-
- #biographywindow:not(.maximized) .window-body-section,
- #biographywindow:not(.maximized) .window-body-section-title,
- #biographywindow:not(.maximized) .window-body-section-country,
- #biographywindow:not(.maximized) .window-body-projects,
- #biographywindow:not(.maximized) .window-body-projects-title {
-   margin-left: 1em !important;
-   margin-right: 1em !important;
- }
-
- #biographywindow:not(.maximized) .window-body-projects-image {
-   max-width: 90% !important;
-  }*/
 
 }
   
