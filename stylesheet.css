@@ -270,7 +270,7 @@ font-family: WindowsRegular;
 .image-style img {
 width: 100%;
 padding: 16px; 
-box-sizing: border-box; 
+object-fit: contain 
 }
 .filetoolbar {
 display: flex;
@@ -536,9 +536,14 @@ width: 90vw !important;
 
   #biographywindow .window-body {
     max-height: 500px;
-    overflow-y: auto;}
+    overflow-y: auto;
+  }
  
- 
+ .image-style img {
+    padding: 2px; /* optional: reduce padding for more image space */
+  }
+
+  
 
 /*
  #biographywindow:not(.maximized) {
