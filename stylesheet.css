@@ -167,11 +167,6 @@ left: 0 !important;
 box-sizing: border-box;
 }
 
-.window.maximized .window-body {
-
-}
-
-
 .skills {
 display: flex;
 flex-wrap: wrap;
@@ -197,7 +192,7 @@ display: inline-block;
 .vue { background-color: #42b883; }
 .swift { background-color: #ffac45; }
 .swiftui { background-color: #0f62fe; }
-.flask { background-color: #000000; }
+.flask { background-color: #095f0d; }
 .mongodb { background-color: #4db33d; }
 .git { background-color: #a259ff; }
 .figma { background-color: #a259ff; }
