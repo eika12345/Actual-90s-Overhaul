@@ -59,7 +59,7 @@ Biography
 <div class="window-body">
       <div class="biography-container">
 <div style="display: flex; justify-content: center;margin-top: 4em;">
-  <img src="./images/erikasfull.jpg" alt="erikas image" style="width: 100%;border-top: 2px solid #fff; 
+  <img src="./images/meonmountain.jpg" alt="erikas image" style="width: 100%;border-top: 2px solid #fff; 
      border-bottom: 2px solid #808080;
      border-left: 2px solid #fff;
      border-right: 2px solid #808080;"
@@ -244,9 +244,15 @@ Images
 <p>FiveM Roleplay Community & Service Hub</p>
 </div>
 
+<!-- emailform folder -->     
+<div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('emailformfolder')">
+<img src="./images/fullfolder.png" alt="folder icon" />
+<p>Email Subscription form</p>
+</div>
+
 </div>
 <div class="folder-status-bar">
-<span class="status-left">5 object(s) </span>
+<span class="status-left">6 object(s)</span>
 <span class="status-right">My Computer</span>
 </div>
 </div>
@@ -839,19 +845,19 @@ FiveM Roleplay Community & Service Hub
 <div class="folder-container">
 <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('fivemimage1')">
 <img src="./images/imageicon.png" alt="imageicon" />
-<p>E-commerce website image 1.jpg</p>
+<p>FiveM roleplay hub image 1.jpg</p>
 </div>
 <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('fivemimage2')">
 <img src="./images/imageicon.png" alt="imageicon" />
-<p>E-commerce website image 2.jpg</p>
+<p>FiveM roleplay hub image 2.jpg</p>
 </div>
 <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('fivemimage3')">
 <img src="./images/imageicon.png" alt="imageicon" />
-<p>E-commerce website image 3.jpg</p>
+<p>FiveM roleplay hub image 3.jpg</p>
 </div>
 <div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('fivemimage4')">
 <img src="./images/imageicon.png" alt="imageicon" />
-<p>E-commerce website image 4.jpg</p>
+<p>FiveM roleplay hub image 4.jpg</p>
 </div>
 </div>
 
@@ -866,7 +872,7 @@ FiveM Roleplay Community & Service Hub
 </div>
 </div>
 <!-------- images inside fivem folder -------->
-<!-- E-commerce website image 1 -->
+<!-- fivem image 1 -->
 <div class="window hidden" id="fivemimage1" data-title=" FiveM roleplay hub image 1.jpg" data-icon="./images/imageicon.png">
 <div class="title-bar" onmousedown="startDrag(event, 'fivemimage1')"  ontouchstart="startDrag(event, 'fivemimage1')">
 <span class="title-text">
@@ -883,7 +889,7 @@ FiveM roleplay hub image 1.jpg
 <img src="./images/nonamerppage1.png" alt="FiveM Image 1" style="width: 100%; max-height: 80vh; object-fit: contain;" />
 </div>
 </div>
-<!-- E-commerce website image 2 -->
+<!-- fivem image 2 -->
 <div class="window hidden" id="fivemimage2" data-title="FiveM roleplay hub image 2.jpg" data-icon="./images/imageicon.png">
 <div class="title-bar" onmousedown="startDrag(event, 'fivemimage2')"   ontouchstart="startDrag(event, 'fivemimage2')">
 <span class="title-text">
@@ -901,7 +907,7 @@ FiveM roleplay hub image 2.jpg
 <img src="./images/nonamerppage2.png" alt="FiveM Image 2" style="width: 100%; max-height: 80vh; object-fit: contain;" />
 </div>
 </div>
-<!-- E-commerce website image 3 -->
+<!-- fivem image 3 -->
 <div class="window hidden" id="fivemimage3" data-title="FiveM roleplay hub image 3.jpg" data-icon="./images/imageicon.png">
 <div class="title-bar" onmousedown="startDrag(event, 'fivemimage3')"    ontouchstart="startDrag(event, 'fivemimage3')" >
 <span class="title-text">
@@ -919,7 +925,7 @@ FiveM roleplay hub image 3.jpg
 <img src="./images/nonamerppage3.png" alt="FiveM Image 3" style="width: 100%; max-height: 80vh; object-fit: contain;" />
 </div>
 </div>
-<!-- E-commerce website image 4 -->
+<!-- fivem image 4 -->
 <div class="window hidden" id="fivemimage4" data-title="FiveM roleplay hub image 4.jpg" data-icon="./images/imageicon.png">
 <div class="title-bar" onmousedown="startDrag(event, 'fivemimage4')"  ontouchstart="startDrag(event, 'fivemimage4')">
 <span class="title-text">
@@ -937,6 +943,146 @@ FiveM roleplay hub image 4.jpg
 <img src="./images/nonamerppage4.png" alt="FiveM Image 4" style="width: 100%; max-height: 80vh; object-fit: contain;" />
 </div>
 </div>
+
+<!---------------- Emailform Folder ---------------->
+<div class="window hidden folder-window" id="emailformfolder" data-title="Email Subscription Form" data-icon="./images/fullfolder.png">
+<div class="title-bar" onmousedown="startDrag(event, 'emailformfolder')" ontouchstart="startDrag(event, 'emailformfolder')">
+<span class="title-text">
+<img src="./images/fullfolder.png" alt="camera image" class="title-icon" />
+Email Subscription Form
+</span>
+<div class="title-bar-controls">
+<button aria-label="Minimize" onclick="minimizeWindow('emailformfolder')"></button>
+<button aria-label="Maximize" onclick="maximizeWindow('emailformfolder')"></button>
+<button aria-label="Close" onclick="closeWindow('emailformfolder')"></button>
+</div>
+</div>
+
+<div class="window-body">
+<!-- Toolbar -->
+<div class="filetoolbar">
+<span class="divider"></span>
+<ul>
+<li><span><u>F</u>ile</span></li>
+<li><span><u>E</u>dit</span></li>
+<li><span><u>V</u>iew</span></li>
+<li><span><u>G</u>o</span></li>
+<li><span><u>F</u>avourites</span></li>
+<li><span><u>H</u>elp</span></li>
+</ul>
+</div>
+
+<!-- Address Bar -->
+<div class="field-row">
+<span class="divider"></span>
+<div class="address"><u>A</u>ddress</div>
+<input type="text" value="C:\Images\Email Subscription Form" style="width: 100%; font-weight: 900;" />
+</div>
+
+<!-- Folder Content Container -->
+<div class="folder-container">
+<div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('emailformimage1')">
+<img src="./images/imageicon.png" alt="imageicon" />
+<p>Email form image 1.png</p>
+</div>
+<div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('emailformimage2')">
+<img src="./images/imageicon.png" alt="imageicon" />
+<p>Email form success 2 image.png</p>
+</div>
+<div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('emailformimage3')">
+<img src="./images/imageicon.png" alt="imageicon" />
+<p>Email form mobile 3 image.png</p>
+</div>
+<div class="folder" onclick="selectFolder(this)" ondblclick="openFolder('emailformimage4')">
+<img src="./images/imageicon.png" alt="imageicon" />
+<p>Email form success mobile 4 image.png</p>
+</div>
+</div>
+
+<!-- Status Bar -->
+<div class="folder-status-bar">
+<span class="status-left">4 object(s)</span>
+<span class="status-right">My Computer</span>
+</div>
+
+
+
+</div>
+</div>
+<!-------- images inside email form folder -------->
+<!-- email form image 1 -->
+<div class="window hidden" id="emailformimage1" data-title="Email form image 1.png" data-icon="./images/imageicon.png">
+<div class="title-bar" onmousedown="startDrag(event, 'emailformimage1')"  ontouchstart="startDrag(event, 'emailformimage1')">
+<span class="title-text">
+<img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+Email form image 1.png
+</span>
+<div class="title-bar-controls">
+<button aria-label="Minimize" onclick="minimizeWindow('emailformimage1')"></button>
+<button aria-label="Maximize" onclick="maximizeWindow('emailformimage1')"></button>
+<button aria-label="Close" onclick="closeWindow('emailformimage1')"></button>
+</div>
+</div>
+<div class="window-body image-style">
+<img src="./images/emailform1.png" alt="emailform1" style="width: 100%; max-height: 80vh; object-fit: contain;" />
+</div>
+</div>
+<!-- email form image 2 -->
+<div class="window hidden" id="emailformimage2" data-title="Email form success 2 image.png" data-icon="./images/imageicon.png">
+<div class="title-bar" onmousedown="startDrag(event, 'emailformimage2')"   ontouchstart="startDrag(event, 'emailformimage2')">
+<span class="title-text">
+<img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+Email form success 2 image.png
+
+</span>
+<div class="title-bar-controls">
+<button aria-label="Minimize" onclick="minimizeWindow('emailformimage2')"></button>
+<button aria-label="Maximize" onclick="maximizeWindow('emailformimage')"></button>
+<button aria-label="Close" onclick="closeWindow('emailformimage2')"></button>
+</div>
+</div>
+<div class="window-body image-style">
+<img src="./images/emailformsuccess2.png" alt="emailformimage 2" style="width: 100%; max-height: 80vh; object-fit: contain;" />
+</div>
+</div>
+<!-- email form 3 -->
+<div class="window hidden" id="emailformimage3" data-title="Email form mobile 3 image.png" data-icon="./images/imageicon.png">
+<div class="title-bar" onmousedown="startDrag(event, 'emailformimage3')"    ontouchstart="startDrag(event, 'emailformimage3')" >
+<span class="title-text">
+<img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+Email form mobile 3 image.png
+
+</span>
+<div class="title-bar-controls">
+<button aria-label="Minimize" onclick="minimizeWindow('emailformimage3')"></button>
+<button aria-label="Maximize" onclick="maximizeWindow('emailformimage3')"></button>
+<button aria-label="Close" onclick="closeWindow('emailformimage3')"></button>
+</div>
+</div>
+<div class="window-body image-style">
+<img src="./images/emailformmobile3.png" alt="FiveM Image 3" style="width: 100%; max-height: 80vh; object-fit: contain;" />
+</div>
+</div>
+<!-- email form 4 -->
+<div class="window hidden" id="emailformimage4" data-title="Email form success mobile 4 image.png" data-icon="./images/imageicon.png">
+<div class="title-bar" onmousedown="startDrag(event, 'emailformimage4')"  ontouchstart="startDrag(event, 'emailformimage4')">
+<span class="title-text">
+<img src="./images/imageicon.png" alt="camera image" class="title-icon" />
+Email form success mobile 4 image.png
+
+</span>
+<div class="title-bar-controls">
+<button aria-label="Minimize" onclick="minimizeWindow('emailformimage4')"></button>
+<button aria-label="Maximize" onclick="maximizeWindow('emailformimage4')"></button>
+<button aria-label="Close" onclick="closeWindow('emailformimage4')"></button>
+</div>
+</div>
+<div class="window-body image-style">
+<img src="./images/emailformmobilesuccess4.png" alt="emailformimage4" style="width: 100%; max-height: 80vh; object-fit: contain;" />
+</div>
+</div>
+
+
 <!-- Taskbar ---------------------------------------------------------------------------------------------------------------------------------------------->
 <div class="taskbar">
 <button class="start-button" onclick="toggleMenu()">
@@ -1180,6 +1326,37 @@ win.style.width = isMobile ? '90%' : '60%';
 win.style.height = isMobile ? 'auto' : 'auto';
 break;
 case 'fivemimage4':
+win.style.left = isMobile ? '75px' : '350px';
+win.style.top = isMobile ? '200px' : '200px';
+win.style.width = isMobile ? '90%' : '60%';
+win.style.height = isMobile ? 'auto' : 'auto';
+break;
+// email form
+case 'emailformfolder':
+win.style.left = isMobile ? '35px' : '310px';
+win.style.top = isMobile ? '160px' : '160px';
+win.style.width = isMobile ? '70%' : '40%';
+win.style.height = isMobile ? '400px' : '400px';
+break;
+case 'emailformimage1':
+win.style.left = isMobile ? '45px' : '320px';
+win.style.top = isMobile ? '170px' : '170px';
+win.style.width = isMobile ? '90%' : '60%';
+win.style.height = isMobile ? 'auto' : 'auto';
+break;
+case 'emailformimage2':
+win.style.left = isMobile ? '55px' : '330px';
+win.style.top = isMobile ? '180px' : '180px';
+win.style.width = isMobile ? '90%' : '60%';
+win.style.height = isMobile ? 'auto' : 'auto';
+break;
+case 'emailformimage3':
+win.style.left = isMobile ? '65px' : '340px';
+win.style.top = isMobile ? '190px' : '190px';
+win.style.width = isMobile ? '90%' : '60%';
+win.style.height = isMobile ? 'auto' : 'auto';
+break;
+case 'emailformimage4':
 win.style.left = isMobile ? '75px' : '350px';
 win.style.top = isMobile ? '200px' : '200px';
 win.style.width = isMobile ? '90%' : '60%';
